@@ -96,7 +96,7 @@
               <span>&gt;</span> Home
             </button>
             <button onclick="switchTab('about')" id="tab-about" class="w-full text-left px-3 py-2 rounded text-lg md:text-xl transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
-              <span class="opacity-0">&gt;</span> About
+              <span class="opacity-0">&gt;</span> Personal Information
             </button>
             <button onclick="switchTab('achievements')" id="tab-achievements" class="w-full text-left px-3 py-2 rounded text-lg md:text-xl transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
               <span class="opacity-0">&gt;</span> Achievements
@@ -178,34 +178,58 @@
           </div>
         </section>
 
-        <!-- SECTION 2: ABOUT ME VIEW -->
-        <section id="view-about" class="h-full flex flex-col justify-center items-center text-center overflow-y-auto px-4 py-6 hidden">
-          <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">About <span class="text-[#00d2c4]">me</span></h2>
+      <!-- SECTION 2: PERSONAL INFORMATION VIEW (Comprehensive 2-Column Details) -->
+        <section id="view-about" class="h-full flex flex-col justify-start overflow-y-auto px-2 py-2 hidden space-y-4">
           
-          <div class="max-w-2xl space-y-4 text-base sm:text-lg text-gray-300 leading-relaxed font-normal">
-            <p>I’m Ryne Angelo Rigor, a Bachelor of Multimedia Arts student who draws portraits.</p>
-            <p>I started with traditional media, mainly pencil and ink, and I’ve spent most of my practice learning how to capture a person’s character in a face.</p>
-            <p>Lately I’ve been learning digital illustration to widen what I can create. My goal is to grow into a professional illustrator.</p>
+          <!-- Intro Paragraph -->
+          <div class="bg-[#202430] bevel-out p-5 space-y-2">
+            <div class="flex justify-between items-center border-b border-[#2e3440] pb-2">
+              <span class="text-xs font-retro text-[#00d2c4] uppercase tracking-widest bg-[#161821] px-2 py-0.5 bevel-in">Profile Dossier</span>
+              <span class="text-xs font-retro text-gray-400">Status: <span class="text-green-400">AVAILABLE FOR HIRE</span></span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Personal Information</h2>
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+              I've been drawing and creating art since childhood, evolving a lifelong passion into professional-grade multimedia craftsmanship. I specialize in bridging traditional observational skills with modern digital workflows to produce compelling visuals.
+            </p>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl mt-8 text-left">
-            <div class="bg-[#202430] bevel-out p-5">
-              <h3 class="font-bold text-white text-base mb-3">At a glance</h3>
-              <div class="space-y-2 text-sm text-gray-300">
-                <p><strong class="text-white w-20 inline-block">Studying</strong> Bachelor of Multimedia Arts</p>
-                <p><strong class="text-white w-20 inline-block">Focus</strong> Portraits, digital illustration</p>
-                <p><strong class="text-white w-20 inline-block">Tools</strong> Pencil, ink, digital software</p>
-              </div>
-            </div>
-
-            <div class="bg-[#202430] bevel-out p-5">
-              <h3 class="font-bold text-white text-base mb-3">What I bring</h3>
-              <ul class="space-y-2 text-sm text-gray-300 list-disc list-inside">
-                <li>Close attention to detail</li>
-                <li>Steady practice and improvement</li>
-                <li>Willingness to learn new tools</li>
+          <!-- 2-Column Personal Metadata Cards (Structured like the reference list) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <!-- COLUMN 1: Basic Identity -->
+            <div class="bg-[#202430] bevel-out p-4 space-y-3">
+              <h3 class="font-bold text-xs uppercase tracking-wider text-[#00d2c4] font-retro border-b border-[#2e3440] pb-1">
+                Basic Details
+              </h3>
+              <ul class="space-y-2 text-xs text-gray-300 font-mono">
+                <li class="flex justify-between"><span class="text-gray-400">Name:</span> <span class="text-white font-bold">Ryne Angelo</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Surname:</span> <span class="text-white font-bold">Rigor</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Sex:</span> <span class="text-white font-bold">Male</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Date of Birth:</span> <span class="text-white font-bold">March 27, 2007</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Age:</span> <span class="text-white font-bold">19</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Country:</span> <span class="text-white font-bold">Philippines</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Nationality:</span> <span class="text-white font-bold">Filipino</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">City/Town:</span> <span class="text-white font-bold">Baguio City</span></li>
               </ul>
             </div>
+
+            <!-- COLUMN 2: Background, Contact & Preferences -->
+            <div class="bg-[#202430] bevel-out p-4 space-y-3">
+              <h3 class="font-bold text-xs uppercase tracking-wider text-[#00d2c4] font-retro border-b border-[#2e3440] pb-1">
+                Background & Contact
+              </h3>
+              <ul class="space-y-2 text-xs text-gray-300 font-mono">
+                <li class="flex justify-between"><span class="text-gray-400">Occupation:</span> <span class="text-white font-bold">Student / Multimedia Artist</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Marital Status:</span> <span class="text-white font-bold">Single</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Likes:</span> <span class="text-white font-bold">Dancing, Art, Volleyball</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Dislikes:</span> <span class="text-white font-bold">Watermelon, Inconveniences</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Hobby:</span> <span class="text-white font-bold">Art, Volleyball, Video Games</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Personal Qualities:</span> <span class="text-white font-bold">Detail-Oriented, Adaptable</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Mobile:</span> <span class="text-white font-bold">+63 956 856 8308</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">E-mail:</span> <span class="text-white font-bold">rynerigor27@gmail.com</span></li>
+              </ul>
+            </div>
+
           </div>
         </section>
 
