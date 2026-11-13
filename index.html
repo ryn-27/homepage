@@ -239,24 +239,100 @@
           </div>
         </section>
         
-        <!-- SECTION 3: ACHIEVEMENTS VIEW -->
-        <section id="view-achievements" class="h-full flex flex-col justify-between hidden">
-          <div>
-            <h2 class="text-3xl font-bold text-[#00d2c4] mb-2">Achievements</h2>
-            <p class="text-sm text-gray-300">Milestones and recognitions throughout my creative journey.</p>
+      <!-- SECTION 3: ACHIEVEMENTS VIEW (Chronological Photo & Text Grid) -->
+        <section id="view-achievements" class="h-full flex flex-col justify-start overflow-y-auto px-2 py-2 hidden space-y-4">
+          
+          <!-- Header Box -->
+          <div class="bg-[#202430] bevel-out p-5 space-y-2 shrink-0">
+            <div class="flex justify-between items-center border-b border-[#2e3440] pb-2">
+              <span class="text-sm font-retro text-[#00d2c4] uppercase tracking-widest bg-[#161821] px-2 py-0.5 bevel-in">Activity Log</span>
+              <span class="text-sm font-retro text-gray-400">Timeline: <span class="text-white">Elementary — Present</span></span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Achievements & Activities</h2>
+            <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+              A record of my co-curricular and extra-curricular involvement, creative competitions, and milestones from elementary school to the present. Click any photo to inspect.
+            </p>
           </div>
 
-          <div class="space-y-3 my-auto">
-            <div class="bg-[#202430] bevel-out p-3">
-              <p class="text-xs text-[#00d2c4] font-retro">2026</p>
-              <p class="text-sm font-bold text-white">Student Multimedia Arts Exhibition</p>
-              <p class="text-xs text-gray-400">Featured portrait artwork showcase.</p>
+          <!-- 2-Column Achievement Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pb-4">
+
+            <!-- CARD 1: College / Present -->
+            <div class="bg-[#202430] bevel-out p-4 flex flex-col justify-between space-y-3">
+              <div onclick="openLightbox('ach1.jpg', '2026 — Student Multimedia Arts Exhibition')" 
+                   class="w-full h-44 bg-[#161821] bevel-in overflow-hidden cursor-pointer group relative">
+                <img src="ach1.jpg" alt="College Exhibition" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                <span class="absolute bottom-2 right-2 bg-black/75 text-[#00d2c4] text-xs font-retro px-2 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
+              </div>
+              <div class="space-y-1.5">
+                <div class="flex justify-between items-center text-xs font-retro">
+                  <span class="text-[#00d2c4] bg-[#161821] px-2 py-0.5 bevel-in">2026 • COLLEGE</span>
+                  <span class="text-gray-400 uppercase">Co-Curricular</span>
+                </div>
+                <h3 class="text-lg font-bold text-white leading-snug">Student Multimedia Arts Exhibition</h3>
+                <p class="text-sm text-gray-300 leading-relaxed">
+                  Selected to showcase traditional portraiture and digital illustration works in the annual university arts exhibit.
+                </p>
+              </div>
             </div>
-            <div class="bg-[#202430] bevel-out p-3">
-              <p class="text-xs text-[#00d2c4] font-retro">2025</p>
-              <p class="text-sm font-bold text-white">Traditional Media Competition</p>
-              <p class="text-xs text-gray-400">Finalist in Graphite & Ink Illustration category.</p>
+
+            <!-- CARD 2: Senior High School -->
+            <div class="bg-[#202430] bevel-out p-4 flex flex-col justify-between space-y-3">
+              <div onclick="openLightbox('ach2.jpg', '2024 — Inter-School Volleyball Tournament')" 
+                   class="w-full h-44 bg-[#161821] bevel-in overflow-hidden cursor-pointer group relative">
+                <img src="ach2.jpg" alt="High School Sports" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                <span class="absolute bottom-2 right-2 bg-black/75 text-[#00d2c4] text-xs font-retro px-2 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
+              </div>
+              <div class="space-y-1.5">
+                <div class="flex justify-between items-center text-xs font-retro">
+                  <span class="text-[#00d2c4] bg-[#161821] px-2 py-0.5 bevel-in">2024 • SENIOR HIGH</span>
+                  <span class="text-gray-400 uppercase">Extra-Curricular</span>
+                </div>
+                <h3 class="text-lg font-bold text-white leading-snug">Varsity Volleyball & Athletics</h3>
+                <p class="text-sm text-gray-300 leading-relaxed">
+                  Active team player representing the strand in intramurals and regional inter-school volleyball competitions.
+                </p>
+              </div>
             </div>
+
+            <!-- CARD 3: Junior High School -->
+            <div class="bg-[#202430] bevel-out p-4 flex flex-col justify-between space-y-3">
+              <div onclick="openLightbox('ach3.jpg', '2022 — Traditional Poster Making Contest')" 
+                   class="w-full h-44 bg-[#161821] bevel-in overflow-hidden cursor-pointer group relative">
+                <img src="ach3.jpg" alt="Junior High Art Contest" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                <span class="absolute bottom-2 right-2 bg-black/75 text-[#00d2c4] text-xs font-retro px-2 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
+              </div>
+              <div class="space-y-1.5">
+                <div class="flex justify-between items-center text-xs font-retro">
+                  <span class="text-[#00d2c4] bg-[#161821] px-2 py-0.5 bevel-in">2022 • JUNIOR HIGH</span>
+                  <span class="text-gray-400 uppercase">Co-Curricular</span>
+                </div>
+                <h3 class="text-lg font-bold text-white leading-snug">Division Poster Making Competition</h3>
+                <p class="text-sm text-gray-300 leading-relaxed">
+                  Awarded 1st Place for traditional graphite and mixed-media illustration during the school arts festival.
+                </p>
+              </div>
+            </div>
+
+            <!-- CARD 4: Elementary -->
+            <div class="bg-[#202430] bevel-out p-4 flex flex-col justify-between space-y-3">
+              <div onclick="openLightbox('ach4.jpg', '2018 — Elementary Editorial Cartooning')" 
+                   class="w-full h-44 bg-[#161821] bevel-in overflow-hidden cursor-pointer group relative">
+                <img src="ach4.jpg" alt="Elementary Milestone" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                <span class="absolute bottom-2 right-2 bg-black/75 text-[#00d2c4] text-xs font-retro px-2 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
+              </div>
+              <div class="space-y-1.5">
+                <div class="flex justify-between items-center text-xs font-retro">
+                  <span class="text-[#00d2c4] bg-[#161821] px-2 py-0.5 bevel-in">2018 • ELEMENTARY</span>
+                  <span class="text-gray-400 uppercase">Co-Curricular</span>
+                </div>
+                <h3 class="text-lg font-bold text-white leading-snug">Campus Journalism & Art Club</h3>
+                <p class="text-sm text-gray-300 leading-relaxed">
+                  Served as student illustrator for the elementary publication and participated in early visual arts workshops.
+                </p>
+              </div>
+            </div>
+
           </div>
         </section>
 
