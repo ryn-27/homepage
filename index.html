@@ -33,6 +33,21 @@
       border-color: #1a1c23 #3b4252 #3b4252 #1a1c23;
     }
 
+    /* Stepped Retro Pixel Fade Bridge */
+    .pixel-fade-right {
+      background: linear-gradient(
+        to right,
+        #202430 0%,
+        #202430 25%,
+        rgba(32, 36, 48, 0.85) 25%,
+        rgba(32, 36, 48, 0.85) 50%,
+        rgba(32, 36, 48, 0.45) 50%,
+        rgba(32, 36, 48, 0.45) 75%,
+        transparent 75%,
+        transparent 100%
+      );
+    }
+
     ::-webkit-scrollbar {
       width: 6px;
     }
@@ -93,16 +108,16 @@
           <!-- Vertical Nav Menu (Prominent, High Legibility Font Size) -->
           <nav class="space-y-1.5 font-retro">
             <button onclick="switchTab('home')" id="tab-home" class="w-full text-left px-3 py-2 rounded text-lg md:text-xl transition flex items-center gap-2 bg-[#252934] text-[#00d2c4] font-bold">
-              <span>&gt;</span> Home
+              <span>></span> Home
             </button>
             <button onclick="switchTab('about')" id="tab-about" class="w-full text-left px-3 py-2 rounded text-lg md:text-xl transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
-              <span class="opacity-0">&gt;</span> Personal Information
+              <span class="opacity-0">></span> Personal Information
             </button>
             <button onclick="switchTab('achievements')" id="tab-achievements" class="w-full text-left px-3 py-2 rounded text-lg md:text-xl transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
-              <span class="opacity-0">&gt;</span> Achievements
+              <span class="opacity-0">></span> Achievements
             </button>
             <button onclick="switchTab('parents')" id="tab-parents" class="w-full text-left px-3 py-2 rounded text-lg md:text-xl transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
-              <span class="opacity-0">&gt;</span> Parents
+              <span class="opacity-0">></span> Parents
             </button>
           </nav>
         </div>
@@ -178,7 +193,7 @@
           </div>
         </section>
 
-     <!-- SECTION 2: PERSONAL INFORMATION VIEW (Comprehensive 2-Column Details) -->
+        <!-- SECTION 2: PERSONAL INFORMATION VIEW (Comprehensive 2-Column Details) -->
         <section id="view-about" class="h-full flex flex-col justify-start overflow-y-auto px-2 py-2 hidden space-y-4">
           
           <!-- Intro Paragraph -->
@@ -239,7 +254,7 @@
           </div>
         </section>
         
-     <!-- SECTION 3: ACHIEVEMENTS VIEW (Strict No-Scroll 2x2 Grid) -->
+        <!-- SECTION 3: ACHIEVEMENTS VIEW (No-Scroll Horizontal Split + Pixel Fade) -->
         <section id="view-achievements" class="h-full flex flex-col justify-between overflow-hidden hidden gap-3">
           
           <!-- Slim Top Bar with Inline White Title -->
@@ -254,79 +269,91 @@
           <!-- 2x2 Grid Locked to Remaining Screen Height (Zero Scroll) -->
           <div class="flex-1 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-3 overflow-hidden min-h-0">
 
-            <!-- CARD 1: College / Present -->
-            <div class="bg-[#202430] bevel-out p-3 flex flex-col justify-between overflow-hidden min-h-0">
-              <div onclick="openLightbox('ach1.jpg', '2024 — Graduated Senior Highschool')" 
-                   class="w-full flex-1 min-h-0 bg-[#161821] bevel-in overflow-hidden cursor-pointer group relative mb-2">
-                <img src="ach1.jpg" alt="College Exhibition" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
-                <span class="absolute bottom-1.5 right-1.5 bg-black/80 text-[#00d2c4] text-[11px] font-retro px-1.5 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
-              </div>
-              <div class="shrink-0 space-y-1">
-                <div class="flex justify-between items-center text-[11px] font-retro">
+            <!-- CARD 1: Senior High School -->
+            <div onclick="openLightbox('ach1.jpg', '2024 — Graduated Senior Highschool')" 
+                 class="bg-[#202430] bevel-out flex overflow-hidden min-h-0 cursor-pointer group relative">
+              <!-- Left Side: Text Content -->
+              <div class="w-[56%] p-3.5 flex flex-col justify-center space-y-1.5 z-10 shrink-0">
+                <div class="flex flex-wrap items-center gap-1.5 text-[11px] font-retro">
                   <span class="text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">2024 • SENIOR HIGH</span>
                   <span class="text-gray-400 uppercase">Co-Curricular</span>
                 </div>
-                <h3 class="text-sm sm:text-base font-bold text-white leading-tight truncate">Graduated Senior Highschool</h3>
-                <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+                <h3 class="text-sm sm:text-base font-bold text-white leading-snug">Graduated Senior Highschool</h3>
+                <p class="text-xs text-gray-300 leading-relaxed line-clamp-4">
                   Graduated With Honors alongside Conduct Awards. Recognized for Service & Co-Curriculars as Sports Club & Class Secretary, Arts Club, and FEPS Indak member.
                 </p>
               </div>
+              <!-- Right Side: Photo + Stepped Pixel Fade -->
+              <div class="w-[44%] h-full relative bg-[#161821] overflow-hidden">
+                <img src="ach1.jpg" alt="Graduated Senior Highschool" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
+                <div class="absolute inset-y-0 left-0 w-10 pixel-fade-right pointer-events-none"></div>
+                <span class="absolute bottom-2 right-2 bg-black/80 text-[#00d2c4] text-[11px] font-retro px-1.5 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
+              </div>
             </div>
 
-            <!-- CARD 2: Senior High School -->
-            <div class="bg-[#202430] bevel-out p-3 flex flex-col justify-between overflow-hidden min-h-0">
-              <div onclick="openLightbox('ach2.jpg', '2024 — Inter-School Volleyball Tournament')" 
-                   class="w-full flex-1 min-h-0 bg-[#161821] bevel-in overflow-hidden cursor-pointer group relative mb-2">
-                <img src="ach2.jpg" alt="High School Sports" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
-                <span class="absolute bottom-1.5 right-1.5 bg-black/80 text-[#00d2c4] text-[11px] font-retro px-1.5 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
-              </div>
-              <div class="shrink-0 space-y-1">
-                <div class="flex justify-between items-center text-[11px] font-retro">
+            <!-- CARD 2: Extra-Curricular / Athletics -->
+            <div onclick="openLightbox('ach2.jpg', '2024 — Inter-School Volleyball Tournament')" 
+                 class="bg-[#202430] bevel-out flex overflow-hidden min-h-0 cursor-pointer group relative">
+              <!-- Left Side: Text Content -->
+              <div class="w-[56%] p-3.5 flex flex-col justify-center space-y-1.5 z-10 shrink-0">
+                <div class="flex flex-wrap items-center gap-1.5 text-[11px] font-retro">
                   <span class="text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">2024 • SENIOR HIGH</span>
                   <span class="text-gray-400 uppercase">Extra-Curricular</span>
                 </div>
-                <h3 class="text-sm sm:text-base font-bold text-white leading-tight truncate">Varsity Volleyball & Athletics</h3>
-                <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+                <h3 class="text-sm sm:text-base font-bold text-white leading-snug">Varsity Volleyball & Athletics</h3>
+                <p class="text-xs text-gray-300 leading-relaxed line-clamp-4">
                   Active team player representing the strand in intramurals and regional inter-school volleyball competitions.
                 </p>
+              </div>
+              <!-- Right Side: Photo + Stepped Pixel Fade -->
+              <div class="w-[44%] h-full relative bg-[#161821] overflow-hidden">
+                <img src="ach2.jpg" alt="Varsity Volleyball & Athletics" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
+                <div class="absolute inset-y-0 left-0 w-10 pixel-fade-right pointer-events-none"></div>
+                <span class="absolute bottom-2 right-2 bg-black/80 text-[#00d2c4] text-[11px] font-retro px-1.5 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
               </div>
             </div>
 
             <!-- CARD 3: Junior High School -->
-            <div class="bg-[#202430] bevel-out p-3 flex flex-col justify-between overflow-hidden min-h-0">
-              <div onclick="openLightbox('ach3.jpg', '2022 — Junior High Moving Up')" 
-                   class="w-full flex-1 min-h-0 bg-[#161821] bevel-in overflow-hidden cursor-pointer group relative mb-2">
-                <img src="ach3.jpg" alt="Junior High Art Contest" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
-                <span class="absolute bottom-1.5 right-1.5 bg-black/80 text-[#00d2c4] text-[11px] font-retro px-1.5 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
-              </div>
-              <div class="shrink-0 space-y-1">
-                <div class="flex justify-between items-center text-[11px] font-retro">
+            <div onclick="openLightbox('ach3.jpg', '2022 — Junior High Moving Up')" 
+                 class="bg-[#202430] bevel-out flex overflow-hidden min-h-0 cursor-pointer group relative">
+              <!-- Left Side: Text Content -->
+              <div class="w-[56%] p-3.5 flex flex-col justify-center space-y-1.5 z-10 shrink-0">
+                <div class="flex flex-wrap items-center gap-1.5 text-[11px] font-retro">
                   <span class="text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">2022 • JUNIOR HIGH</span>
                   <span class="text-gray-400 uppercase">Co-Curricular</span>
                 </div>
-                <h3 class="text-sm sm:text-base font-bold text-white leading-tight truncate">Junior High Moving Up</h3>
-                <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+                <h3 class="text-sm sm:text-base font-bold text-white leading-snug">Junior High Moving Up</h3>
+                <p class="text-xs text-gray-300 leading-relaxed line-clamp-4">
                   Graduated With Honors & Loyalty Award. Recognized for Service & Leadership (Class Secretary, FEPSIAN Torch, Volleyball Varsity) and Sharjah Expo participation.
                 </p>
+              </div>
+              <!-- Right Side: Photo + Stepped Pixel Fade -->
+              <div class="w-[44%] h-full relative bg-[#161821] overflow-hidden">
+                <img src="ach3.jpg" alt="Junior High Moving Up" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
+                <div class="absolute inset-y-0 left-0 w-10 pixel-fade-right pointer-events-none"></div>
+                <span class="absolute bottom-2 right-2 bg-black/80 text-[#00d2c4] text-[11px] font-retro px-1.5 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
               </div>
             </div>
 
             <!-- CARD 4: Elementary -->
-            <div class="bg-[#202430] bevel-out p-3 flex flex-col justify-between overflow-hidden min-h-0">
-              <div onclick="openLightbox('ach4.jpg', '2018 — Elementary Graduation')" 
-                   class="w-full flex-1 min-h-0 bg-[#161821] bevel-in overflow-hidden cursor-pointer group relative mb-2">
-                <img src="ach4.jpg" alt="Elementary Milestone" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
-                <span class="absolute bottom-1.5 right-1.5 bg-black/80 text-[#00d2c4] text-[11px] font-retro px-1.5 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
-              </div>
-              <div class="shrink-0 space-y-1">
-                <div class="flex justify-between items-center text-[11px] font-retro">
+            <div onclick="openLightbox('ach4.jpg', '2018 — Elementary Graduation')" 
+                 class="bg-[#202430] bevel-out flex overflow-hidden min-h-0 cursor-pointer group relative">
+              <!-- Left Side: Text Content -->
+              <div class="w-[56%] p-3.5 flex flex-col justify-center space-y-1.5 z-10 shrink-0">
+                <div class="flex flex-wrap items-center gap-1.5 text-[11px] font-retro">
                   <span class="text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">2018 • ELEMENTARY</span>
                   <span class="text-gray-400 uppercase">Co-Curricular</span>
                 </div>
-                <h3 class="text-sm sm:text-base font-bold text-white leading-tight truncate">Elementary Graduation</h3>
-                <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+                <h3 class="text-sm sm:text-base font-bold text-white leading-snug">Elementary Graduation</h3>
+                <p class="text-xs text-gray-300 leading-relaxed line-clamp-4">
                   Graduated elementary with a Loyalty Award for continuous enrollment, while actively building my foundational skills and joining school clubs.
                 </p>
+              </div>
+              <!-- Right Side: Photo + Stepped Pixel Fade -->
+              <div class="w-[44%] h-full relative bg-[#161821] overflow-hidden">
+                <img src="ach4.jpg" alt="Elementary Graduation" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
+                <div class="absolute inset-y-0 left-0 w-10 pixel-fade-right pointer-events-none"></div>
+                <span class="absolute bottom-2 right-2 bg-black/80 text-[#00d2c4] text-[11px] font-retro px-1.5 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
               </div>
             </div>
 
