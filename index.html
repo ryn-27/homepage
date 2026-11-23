@@ -91,72 +91,53 @@
     <!-- 3. Main Body Workspace -->
     <div class="flex-1 flex flex-col md:flex-row overflow-hidden p-3 md:p-4 gap-4 bg-[#0f1117]">
       
-      <!-- LEFT SIDEBAR (Extra-Tall Arcade Carousel P1 Character Card + Foreshortened Flanking Shadows) -->
+      <!-- LEFT SIDEBAR (Large Full-Body P1 Character Card + Nav) -->
       <aside class="w-full md:w-72 bg-[#161821] bevel-in p-3 flex flex-col justify-between shrink-0 overflow-hidden">
         <div class="space-y-1.5 min-h-0 flex flex-col">
 
-          <!-- CAROUSEL STAGE: Foreshortened 3D Side Cards + Extra-Tall Center P1 Card -->
-          <div class="relative flex items-center justify-center pt-1.5 shrink-0 select-none" style="perspective: 600px;">
-            
-            <!-- Left Foreshortened Locked Shadow Slot (Decorative) -->
-            <div aria-hidden="true" 
-                 style="transform: rotateY(28deg) scale(0.86);"
-                 class="w-11 h-60 bg-[#0b0c10] border border-[#252934] opacity-70 flex flex-col items-center justify-center -mr-2.5 z-0 pointer-events-none shadow-inner origin-right">
-              <span class="font-retro text-gray-600 text-base">?</span>
-              <span class="font-retro text-[9px] text-gray-700 tracking-tighter">LOCK</span>
-            </div>
-
-            <!-- Center Active P1 Character Card (Extra-Tall Full-Body Frame) -->
-            <div class="relative z-10 w-44 bg-[#202430] bevel-out p-1.5 space-y-1 shadow-2xl">
+          <!-- LARGE P1 CHARACTER CARD -->
+          <div class="relative pt-1 pr-1 shrink-0 select-none">
+            <div class="relative w-full bg-[#202430] bevel-out p-1.5 space-y-1.5 shadow-2xl">
               <!-- Top-Right P1 Seal -->
-              <div class="absolute -top-2 -right-2 z-20 bg-[#b91c1c] text-white font-retro text-xs font-bold px-1.5 py-0.2 border-2 border-[#facc15] shadow-md tracking-wider">
+              <div class="absolute -top-2 -right-2 z-20 bg-[#b91c1c] text-white font-retro text-xs font-bold px-2 py-0.2 border-2 border-[#facc15] shadow-md tracking-wider">
                 P1
               </div>
 
-              <!-- Extra-Tall Full-Body Formal Portrait (Click to Zoom in Lightbox) -->
+              <!-- Large Full-Body Formal Portrait (Head-to-Toe) -->
               <div onclick="openLightbox('formal.jpg', 'Ryne Angelo Rigor — Formal Attire')"
-                   class="w-full h-72 bg-[#161821] bevel-in overflow-hidden relative cursor-pointer group">
+                   class="w-full h-80 bg-[#161821] bevel-in overflow-hidden relative cursor-pointer group flex items-center justify-center">
                 <img src="formal.jpg" alt="Ryne Angelo Rigor Full Body Formal Attire"
-                     class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300">
-                <span class="absolute bottom-1 right-1 bg-black/85 text-[#00d2c4] text-[10px] font-retro px-1.5 py-0.2 border border-[#3b4252]">
+                     class="w-full h-full object-contain group-hover:scale-105 transition duration-300">
+                <span class="absolute bottom-1.5 right-1.5 bg-black/85 text-[#00d2c4] text-[10px] font-retro px-1.5 py-0.2 border border-[#3b4252]">
                   [+ ZOOM]
                 </span>
               </div>
 
-              <!-- Compact Retro RPG Stat Bars (HP / ATK / SPD) -->
-              <div class="space-y-0.5 font-retro text-[11px] leading-none bg-[#161821] bevel-in p-1">
+              <!-- Retro RPG Stat Bars (HP 50%, ATK 50%, SPD 75%) -->
+              <div class="space-y-1 font-retro text-[11px] leading-none bg-[#161821] bevel-in p-1.5">
                 <div class="flex items-center gap-1.5">
                   <span class="text-[#00d2c4] w-6">HP</span>
                   <div class="flex-1 h-1.5 bg-[#252934] overflow-hidden">
-                    <div class="h-full bg-emerald-400 w-[95%]"></div>
+                    <div class="h-full bg-emerald-400 w-[50%]"></div>
                   </div>
-                  <span class="text-white w-4 text-right">95</span>
+                  <span class="text-white w-4 text-right">50</span>
                 </div>
                 <div class="flex items-center gap-1.5">
                   <span class="text-[#00d2c4] w-6">ATK</span>
                   <div class="flex-1 h-1.5 bg-[#252934] overflow-hidden">
-                    <div class="h-full bg-amber-400 w-[90%]"></div>
+                    <div class="h-full bg-amber-400 w-[50%]"></div>
                   </div>
-                  <span class="text-white w-4 text-right">90</span>
+                  <span class="text-white w-4 text-right">50</span>
                 </div>
                 <div class="flex items-center gap-1.5">
                   <span class="text-[#00d2c4] w-6">SPD</span>
                   <div class="flex-1 h-1.5 bg-[#252934] overflow-hidden">
-                    <div class="h-full bg-cyan-400 w-[84%]"></div>
+                    <div class="h-full bg-cyan-400 w-[75%]"></div>
                   </div>
-                  <span class="text-white w-4 text-right">84</span>
+                  <span class="text-white w-4 text-right">75</span>
                 </div>
               </div>
             </div>
-
-            <!-- Right Foreshortened Locked Shadow Slot (Decorative) -->
-            <div aria-hidden="true" 
-                 style="transform: rotateY(-28deg) scale(0.86);"
-                 class="w-11 h-60 bg-[#0b0c10] border border-[#252934] opacity-70 flex flex-col items-center justify-center -ml-2.5 z-0 pointer-events-none shadow-inner origin-left">
-              <span class="font-retro text-gray-600 text-base">?</span>
-              <span class="font-retro text-[9px] text-gray-700 tracking-tighter">LOCK</span>
-            </div>
-
           </div>
 
           <!-- Name & Enhanced Subtitle Tag -->
