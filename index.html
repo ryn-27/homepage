@@ -91,13 +91,28 @@
     <!-- 3. Main Body Workspace -->
     <div class="flex-1 flex flex-col md:flex-row overflow-hidden p-3 md:p-4 gap-4 bg-[#0f1117]">
       
-      <!-- LEFT SIDEBAR (Large Full-Body P1 Character Card + Nav) -->
-      <aside class="w-full md:w-72 bg-[#161821] bevel-in p-3 flex flex-col justify-between shrink-0 overflow-hidden">
+      <!-- LEFT SIDEBAR (Flat Multi-Card Locked Roster + Large P1 Full-Body Card) -->
+      <aside class="w-full md:w-80 bg-[#161821] bevel-in p-3 flex flex-col justify-between shrink-0 overflow-hidden">
         <div class="space-y-1.5 min-h-0 flex flex-col">
 
-          <!-- LARGE P1 CHARACTER CARD -->
-          <div class="relative pt-1 pr-1 shrink-0 select-none">
-            <div class="relative w-full bg-[#202430] bevel-out p-1.5 space-y-1.5 shadow-2xl">
+          <!-- FLAT ROSTER STAGE: Multiple Flat Locked Shadow Cards on Left & Right + Center P1 -->
+          <div class="relative flex items-center justify-center pt-1.5 shrink-0 select-none">
+
+            <!-- Far-Left Flat Locked Shadow Card -->
+            <div aria-hidden="true"
+                 class="w-6 h-56 bg-[#090a0e] border border-[#222632] opacity-55 flex flex-col items-center justify-center -mr-1.5 z-0 pointer-events-none">
+              <span class="font-retro text-gray-700 text-xs">?</span>
+            </div>
+
+            <!-- Inner-Left Flat Locked Shadow Card -->
+            <div aria-hidden="true"
+                 class="w-7 h-64 bg-[#0d0f15] border border-[#2b303f] opacity-75 flex flex-col items-center justify-center -mr-1.5 z-[5] pointer-events-none">
+              <span class="font-retro text-gray-600 text-sm">?</span>
+              <span class="font-retro text-[8px] text-gray-700 tracking-tighter">LOCK</span>
+            </div>
+
+            <!-- Center Active P1 Character Card (Flat, Crisp, Full-Body Frame) -->
+            <div class="relative z-10 w-44 bg-[#202430] bevel-out p-1.5 space-y-1 shadow-2xl">
               <!-- Top-Right P1 Seal -->
               <div class="absolute -top-2 -right-2 z-20 bg-[#b91c1c] text-white font-retro text-xs font-bold px-2 py-0.2 border-2 border-[#facc15] shadow-md tracking-wider">
                 P1
@@ -138,6 +153,20 @@
                 </div>
               </div>
             </div>
+
+            <!-- Inner-Right Flat Locked Shadow Card -->
+            <div aria-hidden="true"
+                 class="w-7 h-64 bg-[#0d0f15] border border-[#2b303f] opacity-75 flex flex-col items-center justify-center -ml-1.5 z-[5] pointer-events-none">
+              <span class="font-retro text-gray-600 text-sm">?</span>
+              <span class="font-retro text-[8px] text-gray-700 tracking-tighter">LOCK</span>
+            </div>
+
+            <!-- Far-Right Flat Locked Shadow Card -->
+            <div aria-hidden="true"
+                 class="w-6 h-56 bg-[#090a0e] border border-[#222632] opacity-55 flex flex-col items-center justify-center -ml-1.5 z-0 pointer-events-none">
+              <span class="font-retro text-gray-700 text-xs">?</span>
+            </div>
+
           </div>
 
           <!-- Name & Enhanced Subtitle Tag -->
