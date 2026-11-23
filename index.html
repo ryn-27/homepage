@@ -175,18 +175,18 @@
             <p class="text-xs font-bold text-[#00d2c4] font-retro tracking-wide">Multimedia arts student</p>
           </div>
 
-          <!-- Vertical Nav Menu (Bigger Retro Text) -->
+          <!-- Vertical Nav Menu (Extra-Clear 2xl Retro Text) -->
           <nav class="space-y-0.5 font-retro shrink-0">
-            <button onclick="switchTab('home')" id="tab-home" class="w-full text-left px-2.5 py-0.5 rounded text-xl transition flex items-center gap-2 bg-[#252934] text-[#00d2c4] font-bold">
+            <button onclick="switchTab('home')" id="tab-home" class="w-full text-left px-2.5 py-0.5 rounded text-2xl leading-snug transition flex items-center gap-2 bg-[#252934] text-[#00d2c4] font-bold">
               <span>></span> Home
             </button>
-            <button onclick="switchTab('about')" id="tab-about" class="w-full text-left px-2.5 py-0.5 rounded text-xl transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
+            <button onclick="switchTab('about')" id="tab-about" class="w-full text-left px-2.5 py-0.5 rounded text-2xl leading-snug transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
               <span class="opacity-0">></span> Personal Information
             </button>
-            <button onclick="switchTab('achievements')" id="tab-achievements" class="w-full text-left px-2.5 py-0.5 rounded text-xl transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
+            <button onclick="switchTab('achievements')" id="tab-achievements" class="w-full text-left px-2.5 py-0.5 rounded text-2xl leading-snug transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
               <span class="opacity-0">></span> Achievements
             </button>
-            <button onclick="switchTab('parents')" id="tab-parents" class="w-full text-left px-2.5 py-0.5 rounded text-xl transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
+            <button onclick="switchTab('parents')" id="tab-parents" class="w-full text-left px-2.5 py-0.5 rounded text-2xl leading-snug transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
               <span class="opacity-0">></span> Family & Friends
             </button>
           </nav>
@@ -520,7 +520,7 @@
         
         if (view) view.classList.add('hidden');
         if (button) {
-          button.className = "w-full text-left px-2.5 py-0.5 rounded text-xl transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]";
+          button.className = "w-full text-left px-2.5 py-0.5 rounded text-2xl leading-snug transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]";
           button.querySelector('span').classList.add('opacity-0');
         }
       });
@@ -530,7 +530,7 @@
       
       if (activeView) activeView.classList.remove('hidden');
       if (activeBtn) {
-        activeBtn.className = "w-full text-left px-2.5 py-0.5 rounded text-xl transition flex items-center gap-2 bg-[#252934] text-[#00d2c4] font-bold";
+        activeBtn.className = "w-full text-left px-2.5 py-0.5 rounded text-2xl leading-snug transition flex items-center gap-2 bg-[#252934] text-[#00d2c4] font-bold";
         activeBtn.querySelector('span').classList.remove('opacity-0');
       }
     }
