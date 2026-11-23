@@ -403,11 +403,90 @@
               </div>
             </div>
 
+         <!-- SECTION 3: ACHIEVEMENTS VIEW (No-Scroll Horizontal Split + Pixel Fade + Clean Award Lists) -->
+        <section id="view-achievements" class="h-full flex flex-col justify-between overflow-hidden hidden gap-3">
+          
+          <!-- Slim Top Bar with Inline White Title -->
+          <div class="bg-[#202430] bevel-out px-4 py-2 flex justify-between items-center shrink-0">
+            <div class="flex items-center gap-3">
+              <span class="text-sm font-retro text-[#00d2c4] uppercase tracking-widest bg-[#161821] px-2 py-0.5 bevel-in">Activity Log</span>
+              <h2 class="text-lg sm:text-xl font-bold text-white tracking-tight">Achievements</h2>
+            </div>
+            <span class="text-sm font-retro text-gray-400">Timeline: <span class="text-white">Elementary — Present</span></span>
+          </div>
+
+          <!-- 2x2 Grid Locked to Remaining Screen Height (Zero Scroll) -->
+          <div class="flex-1 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-3 overflow-hidden min-h-0">
+
+            <!-- CARD 1: Senior High School -->
+            <div onclick="openLightbox('ach1.jpg', '2024 — Graduated Senior Highschool')" 
+                 class="bg-[#202430] bevel-out flex overflow-hidden min-h-0 cursor-pointer group relative">
+              <!-- Left Side: Text + Clean Award List -->
+              <div class="w-[62%] p-3.5 flex flex-col justify-between z-10 shrink-0 overflow-hidden">
+                <div class="space-y-1">
+                  <div class="flex flex-wrap items-center gap-1.5 text-[11px] font-retro">
+                    <span class="text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">2024 • SENIOR HIGH</span>
+                    <span class="text-gray-400 uppercase">Co-Curricular</span>
+                  </div>
+                  <h3 class="text-sm sm:text-base font-bold text-white leading-tight">Graduated Senior Highschool</h3>
+                  <p class="text-[11px] text-gray-300 leading-snug">
+                    Graduated With Honors alongside Conduct, Service & Co-Curricular awards:
+                  </p>
+                </div>
+                <ul class="grid grid-cols-2 gap-x-3 gap-y-0.5 text-[11px] text-gray-200 list-disc pl-4 leading-snug pt-1">
+                  <li>With Honors</li>
+                  <li>Secretary, Sports Club</li>
+                  <li>Active Member, FEPS Indak</li>
+                  <li>Active Member, Arts Club</li>
+                  <li>Active Class Secretary</li>
+                  <li>Most Active Award</li>
+                  <li>Steadfast Learner</li>
+                  <li>Most Dependable</li>
+                  <li>Radiant Helper</li>
+                </ul>
+              </div>
+              <!-- Right Side: Photo + Stepped Pixel Fade -->
+              <div class="w-[38%] h-full relative bg-[#161821] overflow-hidden">
+                <img src="ach1.jpg" alt="Graduated Senior Highschool" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
+                <div class="absolute inset-y-0 left-0 w-8 pixel-fade-right pointer-events-none"></div>
+                <span class="absolute bottom-2 right-2 bg-black/80 text-[#00d2c4] text-[11px] font-retro px-1.5 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
+              </div>
+            </div>
+
+            <!-- CARD 2: Extra-Curricular / Athletics -->
+            <div onclick="openLightbox('ach2.jpg', '2024 — Inter-School Volleyball Tournament')" 
+                 class="bg-[#202430] bevel-out flex overflow-hidden min-h-0 cursor-pointer group relative">
+              <!-- Left Side: Text + Award List -->
+              <div class="w-[62%] p-3.5 flex flex-col justify-between z-10 shrink-0 overflow-hidden">
+                <div class="space-y-1">
+                  <div class="flex flex-wrap items-center gap-1.5 text-[11px] font-retro">
+                    <span class="text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">2024 • SENIOR HIGH</span>
+                    <span class="text-gray-400 uppercase">Extra-Curricular</span>
+                  </div>
+                  <h3 class="text-sm sm:text-base font-bold text-white leading-tight">Varsity Volleyball & Athletics</h3>
+                  <p class="text-[11px] text-gray-300 leading-snug">
+                    Active team player in intramurals and inter-school volleyball competitions:
+                  </p>
+                </div>
+                <ul class="space-y-1 text-xs text-gray-200 list-disc pl-4 leading-snug my-auto">
+                  <li>Team Captain</li>
+                  <li>Main Setter</li>
+                  <li>1st Runner Up</li>
+                </ul>
+              </div>
+              <!-- Right Side: Photo + Stepped Pixel Fade -->
+              <div class="w-[38%] h-full relative bg-[#161821] overflow-hidden">
+                <img src="ach2.jpg" alt="Varsity Volleyball & Athletics" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
+                <div class="absolute inset-y-0 left-0 w-8 pixel-fade-right pointer-events-none"></div>
+                <span class="absolute bottom-2 right-2 bg-black/80 text-[#00d2c4] text-[11px] font-retro px-1.5 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
+              </div>
+            </div>
+
             <!-- CARD 3: Junior High School -->
             <div onclick="openLightbox('ach3.jpg', '2022 — Junior High Moving Up')" 
                  class="bg-[#202430] bevel-out flex overflow-hidden min-h-0 cursor-pointer group relative">
-              <!-- Left Side: Text + 2-Column Award List -->
-              <div class="w-[62%] p-3 flex flex-col justify-between z-10 shrink-0 overflow-hidden">
+              <!-- Left Side: Text + Clean Award List -->
+              <div class="w-[62%] p-3.5 flex flex-col justify-between z-10 shrink-0 overflow-hidden">
                 <div class="space-y-1">
                   <div class="flex flex-wrap items-center gap-1.5 text-[11px] font-retro">
                     <span class="text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">2022 • JUNIOR HIGH</span>
@@ -415,10 +494,10 @@
                   </div>
                   <h3 class="text-sm sm:text-base font-bold text-white leading-tight">Junior High Moving Up</h3>
                   <p class="text-[11px] text-gray-300 leading-snug">
-                    Graduated With Honors & Loyalty Award alongside leadership and sports honors:
+                    Graduated With Honors & Loyalty Award with leadership and varsity honors:
                   </p>
                 </div>
-                <ul class="grid grid-cols-2 gap-x-2 gap-y-0.5 text-[10px] sm:text-[11px] text-gray-200 list-disc pl-3.5 leading-tight pt-1">
+                <ul class="grid grid-cols-2 gap-x-3 gap-y-0.5 text-[11px] text-gray-200 list-disc pl-4 leading-snug pt-1">
                   <li>With Honors</li>
                   <li>Loyalty Award</li>
                   <li>Happy Helper Award</li>
@@ -442,7 +521,7 @@
             <div onclick="openLightbox('ach4.jpg', '2018 — Elementary Graduation')" 
                  class="bg-[#202430] bevel-out flex overflow-hidden min-h-0 cursor-pointer group relative">
               <!-- Left Side: Text + Award List -->
-              <div class="w-[62%] p-3 flex flex-col justify-between z-10 shrink-0 overflow-hidden">
+              <div class="w-[62%] p-3.5 flex flex-col justify-between z-10 shrink-0 overflow-hidden">
                 <div class="space-y-1">
                   <div class="flex flex-wrap items-center gap-1.5 text-[11px] font-retro">
                     <span class="text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">2018 • ELEMENTARY</span>
@@ -466,20 +545,6 @@
               </div>
             </div>
 
-          </div>
-        </section>
-
-        <!-- SECTION 4: FAMILY & FRIENDS VIEW -->
-        <section id="view-parents" class="h-full flex flex-col justify-between hidden">
-          <div>
-            <h2 class="text-3xl font-bold text-[#00d2c4] mb-2">Family & Friends</h2>
-            <p class="text-sm text-gray-300">Information and acknowledgments.</p>
-          </div>
-
-          <div class="bg-[#202430] bevel-out p-4 my-auto">
-            <p class="text-sm text-gray-300 leading-relaxed">
-              Grateful for the support of my family and friends in pursuing my passion for Multimedia Arts and Illustration.
-            </p>
           </div>
         </section>
 
