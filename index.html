@@ -91,39 +91,85 @@
     <!-- 3. Main Body Workspace -->
     <div class="flex-1 flex flex-col md:flex-row overflow-hidden p-3 md:p-4 gap-4 bg-[#0f1117]">
       
-      <!-- LEFT SIDEBAR -->
-      <aside class="w-full md:w-64 bg-[#161821] bevel-in p-4 flex flex-col justify-between shrink-0">
-        <div class="space-y-4">
-          <!-- Profile Avatar Picture (photo.jpg) -->
-          <div class="w-full aspect-square bg-[#202430] bevel-in overflow-hidden relative">
-            <img src="photo.jpg" alt="Ryne Angelo Rigor" class="w-full h-full object-cover">
+      <!-- LEFT SIDEBAR (Retro P1 Character Card + Shadow Roster + Nav) -->
+      <aside class="w-full md:w-64 bg-[#161821] bevel-in p-3 flex flex-col justify-between shrink-0 overflow-hidden">
+        <div class="space-y-2.5 min-h-0 flex flex-col">
+
+          <!-- CHARACTER CARD WITH DECORATIVE SHADOW CARDS BEHIND & P1 BADGE -->
+          <div class="relative pt-1.5 pr-1.5 shrink-0 select-none">
+            <!-- Decorative Non-Interactive Shadow Cards in Back -->
+            <div aria-hidden="true" class="absolute top-0 right-0 w-[86%] h-[88%] bg-[#0b0c10]/80 border border-[#252934]/70 pointer-events-none translate-x-1 -translate-y-0.5"></div>
+            <div aria-hidden="true" class="absolute top-1 right-1 w-[88%] h-[90%] bg-[#12141c]/85 border border-[#2e3440]/70 pointer-events-none"></div>
+
+            <!-- Main Front P1 Character Card -->
+            <div class="relative bg-[#202430] bevel-out p-2 space-y-2">
+              <!-- Top-Right P1 Seal -->
+              <div class="absolute -top-2 -right-2 z-20 bg-[#b91c1c] text-white font-retro text-sm font-bold px-2 py-0.5 border-2 border-[#facc15] shadow-md tracking-wider">
+                P1
+              </div>
+
+              <!-- Full-Body Formal Portrait (Click to Zoom in Lightbox) -->
+              <div onclick="openLightbox('formal.jpg', 'Ryne Angelo Rigor — Formal Attire')"
+                   class="w-full h-36 bg-[#161821] bevel-in overflow-hidden relative cursor-pointer group">
+                <img src="formal.jpg" alt="Ryne Angelo Rigor Full Body Formal Attire"
+                     class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300">
+                <span class="absolute bottom-1 right-1 bg-black/85 text-[#00d2c4] text-[10px] font-retro px-1.5 py-0.5 border border-[#3b4252]">
+                  [+ ZOOM]
+                </span>
+              </div>
+
+              <!-- Retro RPG Stat Bars (HP / ATK / SPD) -->
+              <div class="space-y-1 font-retro text-xs bg-[#161821] bevel-in p-1.5">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-[#00d2c4] w-7">HP</span>
+                  <div class="flex-1 h-2 bg-[#252934] overflow-hidden">
+                    <div class="h-full bg-emerald-400 w-[95%]"></div>
+                  </div>
+                  <span class="text-white w-5 text-right">95</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-[#00d2c4] w-7">ATK</span>
+                  <div class="flex-1 h-2 bg-[#252934] overflow-hidden">
+                    <div class="h-full bg-amber-400 w-[90%]"></div>
+                  </div>
+                  <span class="text-white w-5 text-right">90</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-[#00d2c4] w-7">SPD</span>
+                  <div class="flex-1 h-2 bg-[#252934] overflow-hidden">
+                    <div class="h-full bg-cyan-400 w-[84%]"></div>
+                  </div>
+                  <span class="text-white w-5 text-right">84</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Name & Enhanced Subtitle Tag -->
-          <div>
-            <h1 class="font-bold text-xl text-white leading-tight">Ryne Angelo Rigor</h1>
-            <p class="text-base font-bold text-[#00d2c4] font-retro mt-0.5 tracking-wide">Multimedia arts student</p>
+          <div class="shrink-0">
+            <h1 class="font-bold text-lg text-white leading-tight">Ryne Angelo Rigor</h1>
+            <p class="text-sm font-bold text-[#00d2c4] font-retro tracking-wide">Multimedia arts student</p>
           </div>
 
-          <!-- Vertical Nav Menu (Prominent, High Legibility Font Size) -->
-          <nav class="space-y-1.5 font-retro">
-            <button onclick="switchTab('home')" id="tab-home" class="w-full text-left px-3 py-2 rounded text-lg md:text-xl transition flex items-center gap-2 bg-[#252934] text-[#00d2c4] font-bold">
+          <!-- Vertical Nav Menu -->
+          <nav class="space-y-1 font-retro shrink-0">
+            <button onclick="switchTab('home')" id="tab-home" class="w-full text-left px-3 py-1 rounded text-lg transition flex items-center gap-2 bg-[#252934] text-[#00d2c4] font-bold">
               <span>></span> Home
             </button>
-            <button onclick="switchTab('about')" id="tab-about" class="w-full text-left px-3 py-2 rounded text-lg md:text-xl transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
+            <button onclick="switchTab('about')" id="tab-about" class="w-full text-left px-3 py-1 rounded text-lg transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
               <span class="opacity-0">></span> Personal Information
             </button>
-            <button onclick="switchTab('achievements')" id="tab-achievements" class="w-full text-left px-3 py-2 rounded text-lg md:text-xl transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
+            <button onclick="switchTab('achievements')" id="tab-achievements" class="w-full text-left px-3 py-1 rounded text-lg transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
               <span class="opacity-0">></span> Achievements
             </button>
-            <button onclick="switchTab('parents')" id="tab-parents" class="w-full text-left px-3 py-2 rounded text-lg md:text-xl transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
+            <button onclick="switchTab('parents')" id="tab-parents" class="w-full text-left px-3 py-1 rounded text-lg transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
               <span class="opacity-0">></span> Parents
             </button>
           </nav>
         </div>
 
         <!-- Contact Section & Footer -->
-        <div class="pt-4 border-t border-[#252934] space-y-2 text-xs text-gray-400">
+        <div class="pt-2.5 border-t border-[#252934] space-y-1 text-xs text-gray-400 shrink-0">
           <p class="font-retro text-gray-300 uppercase tracking-wider">Contact me</p>
           <div class="flex items-center gap-2 text-[11px] hover:text-[#00d2c4] transition cursor-pointer">
             <span>✉</span>
@@ -133,7 +179,7 @@
             <span class="font-bold text-[#00d2c4]">f</span>
             <a href="#" class="truncate">Facebook</a>
           </div>
-          <p class="text-[10px] font-retro text-gray-600 pt-2">© 2026 Rigor.</p>
+          <p class="text-[10px] font-retro text-gray-600 pt-0.5">© 2026 Rigor.</p>
         </div>
       </aside>
 
@@ -411,7 +457,7 @@
         
         if (view) view.classList.add('hidden');
         if (button) {
-          button.className = "w-full text-left px-3 py-2 rounded text-lg md:text-xl transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]";
+          button.className = "w-full text-left px-3 py-1 rounded text-lg transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]";
           button.querySelector('span').classList.add('opacity-0');
         }
       });
@@ -421,7 +467,7 @@
       
       if (activeView) activeView.classList.remove('hidden');
       if (activeBtn) {
-        activeBtn.className = "w-full text-left px-3 py-2 rounded text-lg md:text-xl transition flex items-center gap-2 bg-[#252934] text-[#00d2c4] font-bold";
+        activeBtn.className = "w-full text-left px-3 py-1 rounded text-lg transition flex items-center gap-2 bg-[#252934] text-[#00d2c4] font-bold";
         activeBtn.querySelector('span').classList.remove('opacity-0');
       }
     }
