@@ -124,4 +124,377 @@
               </div>
 
               <!-- Compact Retro RPG Stat Bars (HP / ATK / SPD) -->
-              <div class="space-y-0.5 font-retro text-[11px]
+              <div class="space-y-0.5 font-retro text-[11px] leading-none bg-[#161821] bevel-in p-1">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-[#00d2c4] w-6">HP</span>
+                  <div class="flex-1 h-1.5 bg-[#252934] overflow-hidden">
+                    <div class="h-full bg-emerald-400 w-[95%]"></div>
+                  </div>
+                  <span class="text-white w-4 text-right">95</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-[#00d2c4] w-6">ATK</span>
+                  <div class="flex-1 h-1.5 bg-[#252934] overflow-hidden">
+                    <div class="h-full bg-amber-400 w-[90%]"></div>
+                  </div>
+                  <span class="text-white w-4 text-right">90</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-[#00d2c4] w-6">SPD</span>
+                  <div class="flex-1 h-1.5 bg-[#252934] overflow-hidden">
+                    <div class="h-full bg-cyan-400 w-[84%]"></div>
+                  </div>
+                  <span class="text-white w-4 text-right">84</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Foreshortened Locked Shadow Slot (Decorative) -->
+            <div aria-hidden="true" 
+                 style="transform: rotateY(-28deg) scale(0.86);"
+                 class="w-11 h-60 bg-[#0b0c10] border border-[#252934] opacity-70 flex flex-col items-center justify-center -ml-2.5 z-0 pointer-events-none shadow-inner origin-left">
+              <span class="font-retro text-gray-600 text-base">?</span>
+              <span class="font-retro text-[9px] text-gray-700 tracking-tighter">LOCK</span>
+            </div>
+
+          </div>
+
+          <!-- Name & Enhanced Subtitle Tag -->
+          <div class="shrink-0">
+            <h1 class="font-bold text-base text-white leading-tight">Ryne Angelo Rigor</h1>
+            <p class="text-xs font-bold text-[#00d2c4] font-retro tracking-wide">Multimedia arts student</p>
+          </div>
+
+          <!-- Vertical Nav Menu -->
+          <nav class="space-y-0.5 font-retro shrink-0">
+            <button onclick="switchTab('home')" id="tab-home" class="w-full text-left px-2.5 py-0.5 rounded text-base transition flex items-center gap-2 bg-[#252934] text-[#00d2c4] font-bold">
+              <span>></span> Home
+            </button>
+            <button onclick="switchTab('about')" id="tab-about" class="w-full text-left px-2.5 py-0.5 rounded text-base transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
+              <span class="opacity-0">></span> Personal Information
+            </button>
+            <button onclick="switchTab('achievements')" id="tab-achievements" class="w-full text-left px-2.5 py-0.5 rounded text-base transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
+              <span class="opacity-0">></span> Achievements
+            </button>
+            <button onclick="switchTab('parents')" id="tab-parents" class="w-full text-left px-2.5 py-0.5 rounded text-base transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]">
+              <span class="opacity-0">></span> Family & Friends
+            </button>
+          </nav>
+        </div>
+
+        <!-- Contact Section & Footer -->
+        <div class="pt-1.5 border-t border-[#252934] space-y-0.5 text-xs text-gray-400 shrink-0">
+          <p class="font-retro text-gray-300 uppercase tracking-wider text-[11px]">Contact me</p>
+          <div class="flex items-center gap-2 text-[11px] hover:text-[#00d2c4] transition cursor-pointer">
+            <span>✉</span>
+            <a href="mailto:rynerigor27@gmail.com" class="truncate">rynerigor27@gmail.com</a>
+          </div>
+          <div class="flex items-center gap-2 text-[11px] hover:text-[#00d2c4] transition cursor-pointer">
+            <span class="font-bold text-[#00d2c4]">f</span>
+            <a href="#" class="truncate">Facebook</a>
+          </div>
+          <p class="text-[10px] font-retro text-gray-600">© 2026 Rigor.</p>
+        </div>
+      </aside>
+
+      <!-- RIGHT MAIN CONTENT DISPLAY CONTAINER -->
+      <main class="flex-1 bg-[#161821] bevel-in p-5 md:p-6 overflow-hidden flex flex-col justify-between">
+        
+        <!-- SECTION 1: HOME VIEW -->
+        <section id="view-home" class="h-full flex flex-col justify-between overflow-hidden">
+          <div class="space-y-3">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+              Hi, I'm <span class="text-[#00d2c4]">Ryne Angelo Rigor</span>: a multimedia arts student & aspiring illustrator.
+            </h2>
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed max-w-4xl">
+              I draw portraits in traditional media and I'm now exploring digital illustration. Driven by continuous learning, I strive to explore new creative technologies, master digital workflows, and refine my visual techniques. Take a look at my work below.
+            </p>
+          </div>
+
+          <div class="mt-4 flex-1 flex flex-col justify-end overflow-hidden">
+            <p class="text-xs font-retro text-gray-400 uppercase tracking-wider mb-2">Selected work</p>
+            
+            <!-- FIXED 4-COLUMN GALLERY GRID -->
+            <div class="grid grid-cols-4 gap-3 md:gap-4 w-full h-full max-h-[440px]">
+              
+              <!-- Artwork 1 -->
+              <div onclick="openLightbox('art1.jpg', 'Artwork 01')" 
+                   class="bg-[#202430] bevel-out p-1 flex flex-col group cursor-pointer hover:border-[#00d2c4] transition h-full overflow-hidden">
+                <div class="w-full h-full bg-[#161821] bevel-in overflow-hidden">
+                  <img src="art1.jpg" alt="Artwork 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+              </div>
+
+              <!-- Artwork 2 -->
+              <div onclick="openLightbox('art2.jpg', 'Artwork 02')" 
+                   class="bg-[#202430] bevel-out p-1 flex flex-col group cursor-pointer hover:border-[#00d2c4] transition h-full overflow-hidden">
+                <div class="w-full h-full bg-[#161821] bevel-in overflow-hidden">
+                  <img src="art2.jpg" alt="Artwork 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+              </div>
+
+              <!-- Artwork 3 -->
+              <div onclick="openLightbox('art3.jpg', 'Artwork 03')" 
+                   class="bg-[#202430] bevel-out p-1 flex flex-col group cursor-pointer hover:border-[#00d2c4] transition h-full overflow-hidden">
+                <div class="w-full h-full bg-[#161821] bevel-in overflow-hidden">
+                  <img src="art3.jpg" alt="Artwork 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+              </div>
+
+              <!-- Artwork 4 -->
+              <div onclick="openLightbox('art4.jpg', 'Artwork 04')" 
+                   class="bg-[#202430] bevel-out p-1 flex flex-col group cursor-pointer hover:border-[#00d2c4] transition h-full overflow-hidden">
+                <div class="w-full h-full bg-[#161821] bevel-in overflow-hidden">
+                  <img src="art4.jpg" alt="Artwork 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: PERSONAL INFORMATION VIEW (Comprehensive 2-Column Details) -->
+        <section id="view-about" class="h-full flex flex-col justify-start overflow-y-auto px-2 py-2 hidden space-y-4">
+          
+          <!-- Intro Paragraph -->
+          <div class="bg-[#202430] bevel-out p-5 space-y-2">
+            <div class="flex justify-between items-center border-b border-[#2e3440] pb-2">
+              <span class="text-sm font-retro text-[#00d2c4] uppercase tracking-widest bg-[#161821] px-2 py-0.5 bevel-in">Profile Dossier</span>
+              <span class="text-sm font-retro text-gray-400">Status: <span class="text-green-400">AVAILABLE FOR HIRE</span></span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Personal Information</h2>
+            <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+              I'm Ryne Angelo Rigor, I'm a Multimedia Arts student and I've been drawing and creating art since childhood, evolving a lifelong passion into professional-grade multimedia craftsmanship. I specialize in bridging traditional observational skills with modern digital workflows to produce compelling visuals.
+            </p>
+          </div>
+
+          <!-- 2-Column Personal Metadata Cards (Structured like the reference list) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <!-- COLUMN 1: Basic Identity -->
+            <div class="bg-[#202430] bevel-out p-4 space-y-3">
+              <h3 class="font-bold text-sm uppercase tracking-wider text-[#00d2c4] font-retro border-b border-[#2e3440] pb-1">
+                Basic Details
+              </h3>
+              <ul class="space-y-2 text-sm text-gray-300 font-mono">
+                <li class="flex justify-between"><span class="text-gray-400">Name:</span> <span class="text-white font-bold">Ryne Angelo</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Surname:</span> <span class="text-white font-bold">Rigor</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Sex:</span> <span class="text-white font-bold">Male</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Date of Birth:</span> <span class="text-white font-bold">March 27, 2007</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Birthplace:</span> <span class="text-white font-bold">General Santos City</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Age:</span> <span class="text-white font-bold">19</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Height:</span> <span class="text-white font-bold">5'4"</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Weight:</span> <span class="text-white font-bold">63 kg</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Country:</span> <span class="text-white font-bold">Philippines</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Blood Type:</span> <span class="text-white font-bold">A+</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Religion:</span> <span class="text-white font-bold">Catholic</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Nationality:</span> <span class="text-white font-bold">Filipino</span></li>
+                <li class="flex justify-between gap-2"><span class="text-gray-400 shrink-0">Residential Address:</span> <span class="text-white font-bold text-right">Peak Garden Residences, Baguio City</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">City/Town:</span> <span class="text-white font-bold">Baguio City</span></li>
+              </ul>
+            </div>
+
+            <!-- COLUMN 2: Background, Contact & Preferences -->
+            <div class="bg-[#202430] bevel-out p-4 space-y-3">
+              <h3 class="font-bold text-sm uppercase tracking-wider text-[#00d2c4] font-retro border-b border-[#2e3440] pb-1">
+                Background & Contact
+              </h3>
+              <ul class="space-y-2 text-sm text-gray-300 font-mono">
+                <li class="flex justify-between"><span class="text-gray-400">Occupation:</span> <span class="text-white font-bold">Student / Multimedia Artist</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Marital Status:</span> <span class="text-white font-bold">Single</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Likes:</span> <span class="text-white font-bold">Dancing, Art, Volleyball</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Dislikes:</span> <span class="text-white font-bold">Watermelon, Inconveniences</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Hobby:</span> <span class="text-white font-bold">Art, Volleyball, Video Games</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Personal Qualities:</span> <span class="text-white font-bold">Detail-Oriented, Adaptable</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">Mobile:</span> <span class="text-white font-bold">+63 956 856 8308</span></li>
+                <li class="flex justify-between"><span class="text-gray-400">E-mail:</span> <span class="text-white font-bold">rynerigor27@gmail.com</span></li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+        
+        <!-- SECTION 3: ACHIEVEMENTS VIEW (No-Scroll Horizontal Split + Pixel Fade) -->
+        <section id="view-achievements" class="h-full flex flex-col justify-between overflow-hidden hidden gap-3">
+          
+          <!-- Slim Top Bar with Inline White Title -->
+          <div class="bg-[#202430] bevel-out px-4 py-2 flex justify-between items-center shrink-0">
+            <div class="flex items-center gap-3">
+              <span class="text-sm font-retro text-[#00d2c4] uppercase tracking-widest bg-[#161821] px-2 py-0.5 bevel-in">Activity Log</span>
+              <h2 class="text-lg sm:text-xl font-bold text-white tracking-tight">Achievements</h2>
+            </div>
+            <span class="text-sm font-retro text-gray-400">Timeline: <span class="text-white">Elementary — Present</span></span>
+          </div>
+
+          <!-- 2x2 Grid Locked to Remaining Screen Height (Zero Scroll) -->
+          <div class="flex-1 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-3 overflow-hidden min-h-0">
+
+            <!-- CARD 1: Senior High School -->
+            <div onclick="openLightbox('ach1.jpg', '2024 — Graduated Senior Highschool')" 
+                 class="bg-[#202430] bevel-out flex overflow-hidden min-h-0 cursor-pointer group relative">
+              <!-- Left Side: Text Content -->
+              <div class="w-[56%] p-3.5 flex flex-col justify-center space-y-1.5 z-10 shrink-0">
+                <div class="flex flex-wrap items-center gap-1.5 text-[11px] font-retro">
+                  <span class="text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">2024 • SENIOR HIGH</span>
+                  <span class="text-gray-400 uppercase">Co-Curricular</span>
+                </div>
+                <h3 class="text-sm sm:text-base font-bold text-white leading-snug">Graduated Senior Highschool</h3>
+                <p class="text-xs text-gray-300 leading-relaxed line-clamp-4">
+                  Graduated With Honors alongside Conduct Awards. Recognized for Service & Co-Curriculars as Sports Club & Class Secretary, Arts Club, and FEPS Indak member.
+                </p>
+              </div>
+              <!-- Right Side: Photo + Stepped Pixel Fade -->
+              <div class="w-[44%] h-full relative bg-[#161821] overflow-hidden">
+                <img src="ach1.jpg" alt="Graduated Senior Highschool" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
+                <div class="absolute inset-y-0 left-0 w-10 pixel-fade-right pointer-events-none"></div>
+                <span class="absolute bottom-2 right-2 bg-black/80 text-[#00d2c4] text-[11px] font-retro px-1.5 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
+              </div>
+            </div>
+
+            <!-- CARD 2: Extra-Curricular / Athletics -->
+            <div onclick="openLightbox('ach2.jpg', '2024 — Inter-School Volleyball Tournament')" 
+                 class="bg-[#202430] bevel-out flex overflow-hidden min-h-0 cursor-pointer group relative">
+              <!-- Left Side: Text Content -->
+              <div class="w-[56%] p-3.5 flex flex-col justify-center space-y-1.5 z-10 shrink-0">
+                <div class="flex flex-wrap items-center gap-1.5 text-[11px] font-retro">
+                  <span class="text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">2024 • SENIOR HIGH</span>
+                  <span class="text-gray-400 uppercase">Extra-Curricular</span>
+                </div>
+                <h3 class="text-sm sm:text-base font-bold text-white leading-snug">Varsity Volleyball & Athletics</h3>
+                <p class="text-xs text-gray-300 leading-relaxed line-clamp-4">
+                  Active team player representing the strand in intramurals and regional inter-school volleyball competitions.
+                </p>
+              </div>
+              <!-- Right Side: Photo + Stepped Pixel Fade -->
+              <div class="w-[44%] h-full relative bg-[#161821] overflow-hidden">
+                <img src="ach2.jpg" alt="Varsity Volleyball & Athletics" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
+                <div class="absolute inset-y-0 left-0 w-10 pixel-fade-right pointer-events-none"></div>
+                <span class="absolute bottom-2 right-2 bg-black/80 text-[#00d2c4] text-[11px] font-retro px-1.5 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
+              </div>
+            </div>
+
+            <!-- CARD 3: Junior High School -->
+            <div onclick="openLightbox('ach3.jpg', '2022 — Junior High Moving Up')" 
+                 class="bg-[#202430] bevel-out flex overflow-hidden min-h-0 cursor-pointer group relative">
+              <!-- Left Side: Text Content -->
+              <div class="w-[56%] p-3.5 flex flex-col justify-center space-y-1.5 z-10 shrink-0">
+                <div class="flex flex-wrap items-center gap-1.5 text-[11px] font-retro">
+                  <span class="text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">2022 • JUNIOR HIGH</span>
+                  <span class="text-gray-400 uppercase">Co-Curricular</span>
+                </div>
+                <h3 class="text-sm sm:text-base font-bold text-white leading-snug">Junior High Moving Up</h3>
+                <p class="text-xs text-gray-300 leading-relaxed line-clamp-4">
+                  Graduated With Honors & Loyalty Award. Recognized for Service & Leadership (Class Secretary, FEPSIAN Torch, Volleyball Varsity) and Sharjah Expo participation.
+                </p>
+              </div>
+              <!-- Right Side: Photo + Stepped Pixel Fade -->
+              <div class="w-[44%] h-full relative bg-[#161821] overflow-hidden">
+                <img src="ach3.jpg" alt="Junior High Moving Up" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
+                <div class="absolute inset-y-0 left-0 w-10 pixel-fade-right pointer-events-none"></div>
+                <span class="absolute bottom-2 right-2 bg-black/80 text-[#00d2c4] text-[11px] font-retro px-1.5 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
+              </div>
+            </div>
+
+            <!-- CARD 4: Elementary -->
+            <div onclick="openLightbox('ach4.jpg', '2018 — Elementary Graduation')" 
+                 class="bg-[#202430] bevel-out flex overflow-hidden min-h-0 cursor-pointer group relative">
+              <!-- Left Side: Text Content -->
+              <div class="w-[56%] p-3.5 flex flex-col justify-center space-y-1.5 z-10 shrink-0">
+                <div class="flex flex-wrap items-center gap-1.5 text-[11px] font-retro">
+                  <span class="text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">2018 • ELEMENTARY</span>
+                  <span class="text-gray-400 uppercase">Co-Curricular</span>
+                </div>
+                <h3 class="text-sm sm:text-base font-bold text-white leading-snug">Elementary Graduation</h3>
+                <p class="text-xs text-gray-300 leading-relaxed line-clamp-4">
+                  Graduated elementary with a Loyalty Award for continuous enrollment, while actively building my foundational skills and joining school clubs.
+                </p>
+              </div>
+              <!-- Right Side: Photo + Stepped Pixel Fade -->
+              <div class="w-[44%] h-full relative bg-[#161821] overflow-hidden">
+                <img src="ach4.jpg" alt="Elementary Graduation" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
+                <div class="absolute inset-y-0 left-0 w-10 pixel-fade-right pointer-events-none"></div>
+                <span class="absolute bottom-2 right-2 bg-black/80 text-[#00d2c4] text-[11px] font-retro px-1.5 py-0.5 border border-[#3b4252]">[+ Zoom]</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SECTION 4: FAMILY & FRIENDS VIEW -->
+        <section id="view-parents" class="h-full flex flex-col justify-between hidden">
+          <div>
+            <h2 class="text-3xl font-bold text-[#00d2c4] mb-2">Family & Friends</h2>
+            <p class="text-sm text-gray-300">Information and acknowledgments.</p>
+          </div>
+
+          <div class="bg-[#202430] bevel-out p-4 my-auto">
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Grateful for the support of my family and friends in pursuing my passion for Multimedia Arts and Illustration.
+            </p>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+    <!-- 4. Retro Bottom Status Bar -->
+    <div class="bg-[#1a1c23] px-3 py-1 border-t border-[#252934] flex items-center justify-between text-xs font-retro text-gray-400 shrink-0">
+      <div class="flex items-center gap-2">
+        <span class="text-[#00d2c4]">[✓]</span>
+        <span>Document: Done</span>
+      </div>
+      <div class="text-gray-500">
+        RyneOS v1.0
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" onclick="closeLightbox()">
+    <div class="bg-[#161821] bevel-out p-4 max-w-2xl w-full relative" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute top-2 right-2 text-gray-400 hover:text-white font-retro text-xl px-2">×</button>
+      <h3 id="modal-title" class="text-lg font-bold text-[#00d2c4] mb-3 font-retro">Artwork Preview</h3>
+      
+      <div class="w-full max-h-[75vh] bg-[#0f1117] bevel-in overflow-hidden flex items-center justify-center">
+        <img id="modal-img" src="" alt="Full Artwork Preview" class="max-h-[70vh] w-auto object-contain">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(tabName) {
+      ['home', 'about', 'achievements', 'parents'].forEach(t => {
+        const view = document.getElementById(`view-${t}`);
+        const button = document.getElementById(`tab-${t}`);
+        
+        if (view) view.classList.add('hidden');
+        if (button) {
+          button.className = "w-full text-left px-2.5 py-0.5 rounded text-base transition flex items-center gap-2 text-gray-400 hover:text-white hover:bg-[#1a1c23]";
+          button.querySelector('span').classList.add('opacity-0');
+        }
+      });
+
+      const activeView = document.getElementById(`view-${tabName}`);
+      const activeBtn = document.getElementById(`tab-${tabName}`);
+      
+      if (activeView) activeView.classList.remove('hidden');
+      if (activeBtn) {
+        activeBtn.className = "w-full text-left px-2.5 py-0.5 rounded text-base transition flex items-center gap-2 bg-[#252934] text-[#00d2c4] font-bold";
+        activeBtn.querySelector('span').classList.remove('opacity-0');
+      }
+    }
+
+    function openLightbox(imgSrc, title) {
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal-img').src = imgSrc;
+      document.getElementById('lightbox').classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
