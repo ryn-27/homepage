@@ -469,108 +469,204 @@
           </div>
         </section>
 
-<!-- SECTION 4: FAMILY & FRIENDS VIEW (4-Column Portrait Dossier Cards + Zero Scroll) -->
+<!-- SECTION 4: FAMILY & FRIENDS VIEW (Compact 4:5 Portrait Cards + Retro Insta Actions) -->
         <section id="view-parents" class="h-full flex flex-col justify-between overflow-hidden hidden gap-3">
           
           <!-- Slim Top Bar -->
           <div class="bg-[#202430] bevel-out px-4 py-2 flex justify-between items-center shrink-0">
             <div class="flex items-center gap-3">
-              <span class="text-sm font-retro text-[#00d2c4] uppercase tracking-widest bg-[#161821] px-2 py-0.5 bevel-in">Party Roster</span>
+              <span class="text-sm font-retro text-[#00d2c4] uppercase tracking-widest bg-[#161821] px-2 py-0.5 bevel-in">Social Feed</span>
               <h2 class="text-lg sm:text-xl font-bold text-white tracking-tight">Family & Friends</h2>
             </div>
-            <span class="text-sm font-retro text-gray-400">4 Members • <span class="text-[#00d2c4]">Portrait Mode</span></span>
+            <span id="social-status" class="text-sm font-retro text-gray-400">4 Posts • <span class="text-[#00d2c4]">Inner Circle</span></span>
           </div>
 
-          <!-- 4-Column Vertical Portrait Cards Locked to Screen Height -->
-          <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 overflow-hidden min-h-0">
+          <!-- 4-Column Centered Grid (Cards hug their natural 4:5 portrait height instead of stretching) -->
+          <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 items-center overflow-hidden min-h-0">
 
-            <!-- CARD 1: MOM -->
-            <div onclick="openLightbox('fam-mom.jpg', 'My Mom & Me')"
-                 class="bg-[#202430] bevel-out p-2.5 flex flex-col justify-between overflow-hidden min-h-0 cursor-pointer group gap-2">
-              <div class="flex items-center justify-between border-b border-[#2e3440] pb-1 shrink-0">
-                <span class="font-retro text-xs text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">01 // MOM</span>
-                <span class="font-retro text-xs text-gray-400">[+ ZOOM]</span>
+            <!-- POST 1: MOM -->
+            <article class="bg-[#202430] bevel-out p-2.5 flex flex-col gap-2 overflow-hidden">
+              <!-- Retro Post Header -->
+              <div class="flex items-center justify-between border-b border-[#2e3440] pb-1.5 shrink-0">
+                <div class="flex items-center gap-1.5 min-w-0">
+                  <span class="w-2 h-2 bg-[#00d2c4] inline-block shrink-0"></span>
+                  <span class="font-retro text-sm text-white truncate">My Mom & Me</span>
+                </div>
+                <span class="font-retro text-[11px] text-gray-400 bg-[#161821] px-1.5 py-0.2 bevel-in shrink-0">MOM</span>
               </div>
 
-              <!-- Tall Portrait Photo Container -->
-              <div class="flex-1 min-h-0 w-full bg-[#161821] bevel-in overflow-hidden relative flex items-center justify-center">
+              <!-- Natural 4:5 Portrait Photo Frame (Not Stretched) -->
+              <div onclick="openLightbox('fam-mom.jpg', 'My Mom & Me')"
+                   class="w-full aspect-[4/5] max-h-64 bg-[#161821] bevel-in overflow-hidden relative cursor-pointer group shrink-0">
                 <img src="fam-mom.jpg" alt="My Mom and Me" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
+                <span class="absolute bottom-1.5 right-1.5 bg-black/85 text-[#00d2c4] text-[10px] font-retro px-1.5 py-0.2 border border-[#3b4252]">
+                  [+ ZOOM]
+                </span>
               </div>
 
-              <!-- Title & Caption -->
-              <div class="bg-[#161821] bevel-in p-2 space-y-1 shrink-0">
-                <h3 class="text-sm font-bold text-white leading-tight">My Mom & Me</h3>
-                <p class="text-[11px] text-gray-300 leading-snug line-clamp-3">
-                  Thank you for your unconditional love, endless sacrifices, and constant support. I am truly blessed to have you as my mom. I love you always!
-                </p>
+              <!-- Retro Insta Action Bar (Heart, Message, Forward) -->
+              <div class="flex items-center justify-between px-1 shrink-0 font-retro text-sm">
+                <div class="flex items-center gap-3">
+                  <button type="button" onclick="togglePostLike(this, 'like-count-mom')" title="Like"
+                          class="text-gray-300 hover:text-rose-400 transition flex items-center gap-1 cursor-pointer">
+                    <span class="text-base leading-none">♡</span>
+                    <span id="like-count-mom" class="text-xs text-gray-400">24</span>
+                  </button>
+                  <button type="button" onclick="openNoteModal('My Mom & Me', 'Thank you for your unconditional love, endless sacrifices, and constant support. I am truly blessed to have you as my mom. I love you always!')" title="Message"
+                          class="text-gray-300 hover:text-[#00d2c4] transition flex items-center cursor-pointer">
+                    <span class="text-base leading-none">✉</span>
+                  </button>
+                  <button type="button" onclick="shareRetroPost('My Mom & Me')" title="Forward"
+                          class="text-gray-300 hover:text-amber-300 transition flex items-center cursor-pointer">
+                    <span class="text-base leading-none">➤</span>
+                  </button>
+                </div>
+                <span class="text-[11px] text-gray-500">POST_01</span>
               </div>
-            </div>
 
-            <!-- CARD 2: DAD -->
-            <div onclick="openLightbox('fam-dad.jpg', 'My Dad & Me')"
-                 class="bg-[#202430] bevel-out p-2.5 flex flex-col justify-between overflow-hidden min-h-0 cursor-pointer group gap-2">
-              <div class="flex items-center justify-between border-b border-[#2e3440] pb-1 shrink-0">
-                <span class="font-retro text-xs text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">02 // DAD</span>
-                <span class="font-retro text-xs text-gray-400">[+ ZOOM]</span>
+              <!-- Retro Caption -->
+              <p class="text-[11px] text-gray-300 leading-snug bg-[#161821] bevel-in p-2">
+                <span class="font-bold text-white mr-1">ryne_rigor</span>Thank you for your unconditional love, endless sacrifices, and constant support. I am truly blessed to have you as my mom. I love you always!
+              </p>
+            </article>
+
+            <!-- POST 2: DAD -->
+            <article class="bg-[#202430] bevel-out p-2.5 flex flex-col gap-2 overflow-hidden">
+              <!-- Retro Post Header -->
+              <div class="flex items-center justify-between border-b border-[#2e3440] pb-1.5 shrink-0">
+                <div class="flex items-center gap-1.5 min-w-0">
+                  <span class="w-2 h-2 bg-[#00d2c4] inline-block shrink-0"></span>
+                  <span class="font-retro text-sm text-white truncate">My Dad & Me</span>
+                </div>
+                <span class="font-retro text-[11px] text-gray-400 bg-[#161821] px-1.5 py-0.2 bevel-in shrink-0">DAD</span>
               </div>
 
-              <!-- Tall Portrait Photo Container -->
-              <div class="flex-1 min-h-0 w-full bg-[#161821] bevel-in overflow-hidden relative flex items-center justify-center">
+              <!-- Natural 4:5 Portrait Photo Frame -->
+              <div onclick="openLightbox('fam-dad.jpg', 'My Dad & Me')"
+                   class="w-full aspect-[4/5] max-h-64 bg-[#161821] bevel-in overflow-hidden relative cursor-pointer group shrink-0">
                 <img src="fam-dad.jpg" alt="My Dad and Me" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
+                <span class="absolute bottom-1.5 right-1.5 bg-black/85 text-[#00d2c4] text-[10px] font-retro px-1.5 py-0.2 border border-[#3b4252]">
+                  [+ ZOOM]
+                </span>
               </div>
 
-              <!-- Title & Caption -->
-              <div class="bg-[#161821] bevel-in p-2 space-y-1 shrink-0">
-                <h3 class="text-sm font-bold text-white leading-tight">My Dad & Me</h3>
-                <p class="text-[11px] text-gray-300 leading-snug line-clamp-3">
-                  Thank you for your hard work, guidance, and sacrifices for our family. You inspire me to become a better person every day. I love you, Dad!
-                </p>
+              <!-- Retro Insta Action Bar -->
+              <div class="flex items-center justify-between px-1 shrink-0 font-retro text-sm">
+                <div class="flex items-center gap-3">
+                  <button type="button" onclick="togglePostLike(this, 'like-count-dad')" title="Like"
+                          class="text-gray-300 hover:text-rose-400 transition flex items-center gap-1 cursor-pointer">
+                    <span class="text-base leading-none">♡</span>
+                    <span id="like-count-dad" class="text-xs text-gray-400">21</span>
+                  </button>
+                  <button type="button" onclick="openNoteModal('My Dad & Me', 'Thank you for your hard work, guidance, and sacrifices for our family. You inspire me to become a better person every day. I love you, Dad!')" title="Message"
+                          class="text-gray-300 hover:text-[#00d2c4] transition flex items-center cursor-pointer">
+                    <span class="text-base leading-none">✉</span>
+                  </button>
+                  <button type="button" onclick="shareRetroPost('My Dad & Me')" title="Forward"
+                          class="text-gray-300 hover:text-amber-300 transition flex items-center cursor-pointer">
+                    <span class="text-base leading-none">➤</span>
+                  </button>
+                </div>
+                <span class="text-[11px] text-gray-500">POST_02</span>
               </div>
-            </div>
 
-            <!-- CARD 3: SIBLING -->
-            <div onclick="openLightbox('fam-sibling.jpg', 'My Sibling & Me')"
-                 class="bg-[#202430] bevel-out p-2.5 flex flex-col justify-between overflow-hidden min-h-0 cursor-pointer group gap-2">
-              <div class="flex items-center justify-between border-b border-[#2e3440] pb-1 shrink-0">
-                <span class="font-retro text-xs text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">03 // SIBLING</span>
-                <span class="font-retro text-xs text-gray-400">[+ ZOOM]</span>
+              <!-- Retro Caption -->
+              <p class="text-[11px] text-gray-300 leading-snug bg-[#161821] bevel-in p-2">
+                <span class="font-bold text-white mr-1">ryne_rigor</span>Thank you for your hard work, guidance, and sacrifices for our family. You inspire me to become a better person every day. I love you, Dad!
+              </p>
+            </article>
+
+            <!-- POST 3: SIBLING -->
+            <article class="bg-[#202430] bevel-out p-2.5 flex flex-col gap-2 overflow-hidden">
+              <!-- Retro Post Header -->
+              <div class="flex items-center justify-between border-b border-[#2e3440] pb-1.5 shrink-0">
+                <div class="flex items-center gap-1.5 min-w-0">
+                  <span class="w-2 h-2 bg-[#00d2c4] inline-block shrink-0"></span>
+                  <span class="font-retro text-sm text-white truncate">My Sibling & Me</span>
+                </div>
+                <span class="font-retro text-[11px] text-gray-400 bg-[#161821] px-1.5 py-0.2 bevel-in shrink-0">SIBLING</span>
               </div>
 
-              <!-- Tall Portrait Photo Container -->
-              <div class="flex-1 min-h-0 w-full bg-[#161821] bevel-in overflow-hidden relative flex items-center justify-center">
+              <!-- Natural 4:5 Portrait Photo Frame -->
+              <div onclick="openLightbox('fam-sibling.jpg', 'My Sibling & Me')"
+                   class="w-full aspect-[4/5] max-h-64 bg-[#161821] bevel-in overflow-hidden relative cursor-pointer group shrink-0">
                 <img src="fam-sibling.jpg" alt="My Sibling and Me" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
+                <span class="absolute bottom-1.5 right-1.5 bg-black/85 text-[#00d2c4] text-[10px] font-retro px-1.5 py-0.2 border border-[#3b4252]">
+                  [+ ZOOM]
+                </span>
               </div>
 
-              <!-- Title & Caption -->
-              <div class="bg-[#161821] bevel-in p-2 space-y-1 shrink-0">
-                <h3 class="text-sm font-bold text-white leading-tight">My Sibling & Me</h3>
-                <p class="text-[11px] text-gray-300 leading-snug line-clamp-3">
-                  Through everyday jokes, random adventures, and shared memories at home, I am grateful to have you by my side through every chapter.
-                </p>
+              <!-- Retro Insta Action Bar -->
+              <div class="flex items-center justify-between px-1 shrink-0 font-retro text-sm">
+                <div class="flex items-center gap-3">
+                  <button type="button" onclick="togglePostLike(this, 'like-count-sibling')" title="Like"
+                          class="text-gray-300 hover:text-rose-400 transition flex items-center gap-1 cursor-pointer">
+                    <span class="text-base leading-none">♡</span>
+                    <span id="like-count-sibling" class="text-xs text-gray-400">19</span>
+                  </button>
+                  <button type="button" onclick="openNoteModal('My Sibling & Me', 'Through everyday jokes, random adventures, and shared memories at home, I am grateful to have you by my side through every chapter.')" title="Message"
+                          class="text-gray-300 hover:text-[#00d2c4] transition flex items-center cursor-pointer">
+                    <span class="text-base leading-none">✉</span>
+                  </button>
+                  <button type="button" onclick="shareRetroPost('My Sibling & Me')" title="Forward"
+                          class="text-gray-300 hover:text-amber-300 transition flex items-center cursor-pointer">
+                    <span class="text-base leading-none">➤</span>
+                  </button>
+                </div>
+                <span class="text-[11px] text-gray-500">POST_03</span>
               </div>
-            </div>
 
-            <!-- CARD 4: FRIENDS -->
-            <div onclick="openLightbox('fam-friends.jpg', 'My Friends')"
-                 class="bg-[#202430] bevel-out p-2.5 flex flex-col justify-between overflow-hidden min-h-0 cursor-pointer group gap-2">
-              <div class="flex items-center justify-between border-b border-[#2e3440] pb-1 shrink-0">
-                <span class="font-retro text-xs text-[#00d2c4] bg-[#161821] px-1.5 py-0.2 bevel-in">04 // FRIENDS</span>
-                <span class="font-retro text-xs text-gray-400">[+ ZOOM]</span>
+              <!-- Retro Caption -->
+              <p class="text-[11px] text-gray-300 leading-snug bg-[#161821] bevel-in p-2">
+                <span class="font-bold text-white mr-1">ryne_rigor</span>Through everyday jokes, random adventures, and shared memories at home, I am grateful to have you by my side through every chapter.
+              </p>
+            </article>
+
+            <!-- POST 4: FRIENDS -->
+            <article class="bg-[#202430] bevel-out p-2.5 flex flex-col gap-2 overflow-hidden">
+              <!-- Retro Post Header -->
+              <div class="flex items-center justify-between border-b border-[#2e3440] pb-1.5 shrink-0">
+                <div class="flex items-center gap-1.5 min-w-0">
+                  <span class="w-2 h-2 bg-[#00d2c4] inline-block shrink-0"></span>
+                  <span class="font-retro text-sm text-white truncate">My Friends</span>
+                </div>
+                <span class="font-retro text-[11px] text-gray-400 bg-[#161821] px-1.5 py-0.2 bevel-in shrink-0">CREW</span>
               </div>
 
-              <!-- Tall Portrait Photo Container -->
-              <div class="flex-1 min-h-0 w-full bg-[#161821] bevel-in overflow-hidden relative flex items-center justify-center">
+              <!-- Natural 4:5 Portrait Photo Frame -->
+              <div onclick="openLightbox('fam-friends.jpg', 'My Friends')"
+                   class="w-full aspect-[4/5] max-h-64 bg-[#161821] bevel-in overflow-hidden relative cursor-pointer group shrink-0">
                 <img src="fam-friends.jpg" alt="My Friends" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
+                <span class="absolute bottom-1.5 right-1.5 bg-black/85 text-[#00d2c4] text-[10px] font-retro px-1.5 py-0.2 border border-[#3b4252]">
+                  [+ ZOOM]
+                </span>
               </div>
 
-              <!-- Title & Caption -->
-              <div class="bg-[#161821] bevel-in p-2 space-y-1 shrink-0">
-                <h3 class="text-sm font-bold text-white leading-tight">My Friends</h3>
-                <p class="text-[11px] text-gray-300 leading-snug line-clamp-3">
-                  Thank you for the laughter, unforgettable memories, and genuine friendship. I am grateful to have you all as part of my journey!
-                </p>
+              <!-- Retro Insta Action Bar -->
+              <div class="flex items-center justify-between px-1 shrink-0 font-retro text-sm">
+                <div class="flex items-center gap-3">
+                  <button type="button" onclick="togglePostLike(this, 'like-count-friends')" title="Like"
+                          class="text-gray-300 hover:text-rose-400 transition flex items-center gap-1 cursor-pointer">
+                    <span class="text-base leading-none">♡</span>
+                    <span id="like-count-friends" class="text-xs text-gray-400">32</span>
+                  </button>
+                  <button type="button" onclick="openNoteModal('My Friends', 'Thank you for the laughter, unforgettable memories, and genuine friendship. I am grateful to have you all as part of my journey!')" title="Message"
+                          class="text-gray-300 hover:text-[#00d2c4] transition flex items-center cursor-pointer">
+                    <span class="text-base leading-none">✉</span>
+                  </button>
+                  <button type="button" onclick="shareRetroPost('My Friends')" title="Forward"
+                          class="text-gray-300 hover:text-amber-300 transition flex items-center cursor-pointer">
+                    <span class="text-base leading-none">➤</span>
+                  </button>
+                </div>
+                <span class="text-[11px] text-gray-500">POST_04</span>
               </div>
-            </div>
+
+              <!-- Retro Caption -->
+              <p class="text-[11px] text-gray-300 leading-snug bg-[#161821] bevel-in p-2">
+                <span class="font-bold text-white mr-1">ryne_rigor</span>Thank you for the laughter, unforgettable memories, and genuine friendship. I am grateful to have you all as part of my journey!
+              </p>
+            </article>
 
           </div>
         </section>
