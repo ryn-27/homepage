@@ -469,7 +469,7 @@
           </div>
         </section>
 
-        <!-- SECTION 4: FAMILY & FRIENDS VIEW (4 Retro Insta-Style Post Cards + Zero Scroll) -->
+      <!-- SECTION 4: FAMILY & FRIENDS VIEW (4 Retro Insta-Style Post Cards + Square/Balanced Photos) -->
         <section id="view-parents" class="h-full flex flex-col justify-between overflow-hidden hidden gap-3">
           
           <!-- Slim Top Bar -->
@@ -482,10 +482,10 @@
           </div>
 
           <!-- 4-Column Retro Insta-Style Grid Locked to Screen Height -->
-          <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 overflow-hidden min-h-0">
+          <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 overflow-hidden min-h-0 items-stretch">
 
             <!-- POST 1: MOM -->
-            <article class="bg-[#202430] bevel-out flex flex-col justify-between overflow-hidden min-h-0 p-2.5 gap-2">
+            <article class="bg-[#202430] bevel-out flex flex-col justify-between overflow-hidden min-h-0 p-3 gap-2">
               <!-- Retro Post Header -->
               <div class="flex items-center justify-between border-b border-[#2e3440] pb-1.5 shrink-0">
                 <div class="flex items-center gap-1.5 min-w-0">
@@ -495,9 +495,9 @@
                 <span class="font-retro text-[11px] text-gray-400 bg-[#161821] px-1.5 py-0.2 bevel-in shrink-0">MOM</span>
               </div>
 
-              <!-- Square/Tall Retro Photo Frame -->
+              <!-- Balanced Square-ish Retro Photo Frame -->
               <div onclick="openLightbox('fam-mom.jpg', 'My Mom & Me')"
-                   class="flex-1 min-h-0 w-full bg-[#161821] bevel-in overflow-hidden relative cursor-pointer group">
+                   class="w-full h-44 sm:h-48 bg-[#161821] bevel-in overflow-hidden relative cursor-pointer group shrink-0">
                 <img src="fam-mom.jpg" alt="My Mom and Me" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
                 <span class="absolute bottom-1.5 right-1.5 bg-black/85 text-[#00d2c4] text-[10px] font-retro px-1.5 py-0.2 border border-[#3b4252]">
                   [+ ZOOM]
@@ -525,13 +525,13 @@
               </div>
 
               <!-- Retro Caption -->
-              <p class="text-[11px] text-gray-300 leading-snug bg-[#161821] bevel-in p-2 line-clamp-4 shrink-0">
+              <p class="text-xs text-gray-300 leading-relaxed bg-[#161821] bevel-in p-2.5 flex-1 overflow-y-auto">
                 <span class="font-bold text-white mr-1">ryne_rigor</span>Thank you for your unconditional love, endless sacrifices, and constant support. I am truly blessed to have you as my mom. I love you always!
               </p>
             </article>
 
             <!-- POST 2: DAD -->
-            <article class="bg-[#202430] bevel-out flex flex-col justify-between overflow-hidden min-h-0 p-2.5 gap-2">
+            <article class="bg-[#202430] bevel-out flex flex-col justify-between overflow-hidden min-h-0 p-3 gap-2">
               <!-- Retro Post Header -->
               <div class="flex items-center justify-between border-b border-[#2e3440] pb-1.5 shrink-0">
                 <div class="flex items-center gap-1.5 min-w-0">
@@ -541,9 +541,9 @@
                 <span class="font-retro text-[11px] text-gray-400 bg-[#161821] px-1.5 py-0.2 bevel-in shrink-0">DAD</span>
               </div>
 
-              <!-- Photo Frame -->
+              <!-- Balanced Square-ish Retro Photo Frame -->
               <div onclick="openLightbox('fam-dad.jpg', 'My Dad & Me')"
-                   class="flex-1 min-h-0 w-full bg-[#161821] bevel-in overflow-hidden relative cursor-pointer group">
+                   class="w-full h-44 sm:h-48 bg-[#161821] bevel-in overflow-hidden relative cursor-pointer group shrink-0">
                 <img src="fam-dad.jpg" alt="My Dad and Me" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
                 <span class="absolute bottom-1.5 right-1.5 bg-black/85 text-[#00d2c4] text-[10px] font-retro px-1.5 py-0.2 border border-[#3b4252]">
                   [+ ZOOM]
@@ -571,13 +571,13 @@
               </div>
 
               <!-- Retro Caption -->
-              <p class="text-[11px] text-gray-300 leading-snug bg-[#161821] bevel-in p-2 line-clamp-4 shrink-0">
+              <p class="text-xs text-gray-300 leading-relaxed bg-[#161821] bevel-in p-2.5 flex-1 overflow-y-auto">
                 <span class="font-bold text-white mr-1">ryne_rigor</span>Thank you for your hard work, guidance, and sacrifices for our family. You inspire me to become a better person every day. I love you, Dad!
               </p>
             </article>
 
             <!-- POST 3: SIBLING -->
-            <article class="bg-[#202430] bevel-out flex flex-col justify-between overflow-hidden min-h-0 p-2.5 gap-2">
+            <article class="bg-[#202430] bevel-out flex flex-col justify-between overflow-hidden min-h-0 p-3 gap-2">
               <!-- Retro Post Header -->
               <div class="flex items-center justify-between border-b border-[#2e3440] pb-1.5 shrink-0">
                 <div class="flex items-center gap-1.5 min-w-0">
@@ -587,9 +587,9 @@
                 <span class="font-retro text-[11px] text-gray-400 bg-[#161821] px-1.5 py-0.2 bevel-in shrink-0">SIBLING</span>
               </div>
 
-              <!-- Photo Frame -->
+              <!-- Balanced Square-ish Retro Photo Frame -->
               <div onclick="openLightbox('fam-sibling.jpg', 'My Sibling & Me')"
-                   class="flex-1 min-h-0 w-full bg-[#161821] bevel-in overflow-hidden relative cursor-pointer group">
+                   class="w-full h-44 sm:h-48 bg-[#161821] bevel-in overflow-hidden relative cursor-pointer group shrink-0">
                 <img src="fam-sibling.jpg" alt="My Sibling and Me" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
                 <span class="absolute bottom-1.5 right-1.5 bg-black/85 text-[#00d2c4] text-[10px] font-retro px-1.5 py-0.2 border border-[#3b4252]">
                   [+ ZOOM]
@@ -617,13 +617,13 @@
               </div>
 
               <!-- Retro Caption -->
-              <p class="text-[11px] text-gray-300 leading-snug bg-[#161821] bevel-in p-2 line-clamp-4 shrink-0">
+              <p class="text-xs text-gray-300 leading-relaxed bg-[#161821] bevel-in p-2.5 flex-1 overflow-y-auto">
                 <span class="font-bold text-white mr-1">ryne_rigor</span>Through everyday jokes, random adventures, and shared memories at home, I am grateful to have you by my side through every chapter.
               </p>
             </article>
 
             <!-- POST 4: FRIENDS -->
-            <article class="bg-[#202430] bevel-out flex flex-col justify-between overflow-hidden min-h-0 p-2.5 gap-2">
+            <article class="bg-[#202430] bevel-out flex flex-col justify-between overflow-hidden min-h-0 p-3 gap-2">
               <!-- Retro Post Header -->
               <div class="flex items-center justify-between border-b border-[#2e3440] pb-1.5 shrink-0">
                 <div class="flex items-center gap-1.5 min-w-0">
@@ -633,9 +633,9 @@
                 <span class="font-retro text-[11px] text-gray-400 bg-[#161821] px-1.5 py-0.2 bevel-in shrink-0">CREW</span>
               </div>
 
-              <!-- Photo Frame -->
+              <!-- Balanced Square-ish Retro Photo Frame -->
               <div onclick="openLightbox('fam-friends.jpg', 'My Friends')"
-                   class="flex-1 min-h-0 w-full bg-[#161821] bevel-in overflow-hidden relative cursor-pointer group">
+                   class="w-full h-44 sm:h-48 bg-[#161821] bevel-in overflow-hidden relative cursor-pointer group shrink-0">
                 <img src="fam-friends.jpg" alt="My Friends" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300" loading="lazy">
                 <span class="absolute bottom-1.5 right-1.5 bg-black/85 text-[#00d2c4] text-[10px] font-retro px-1.5 py-0.2 border border-[#3b4252]">
                   [+ ZOOM]
@@ -663,59 +663,13 @@
               </div>
 
               <!-- Retro Caption -->
-              <p class="text-[11px] text-gray-300 leading-snug bg-[#161821] bevel-in p-2 line-clamp-4 shrink-0">
+              <p class="text-xs text-gray-300 leading-relaxed bg-[#161821] bevel-in p-2.5 flex-1 overflow-y-auto">
                 <span class="font-bold text-white mr-1">ryne_rigor</span>Thank you for the laughter, unforgettable memories, and genuine friendship. I am grateful to have you all as part of my journey!
               </p>
             </article>
 
           </div>
         </section>
-
-      </main>
-
-    </div>
-
-    <!-- 4. Retro Bottom Status Bar -->
-    <div class="bg-[#1a1c23] px-3 py-1 border-t border-[#252934] flex items-center justify-between text-xs font-retro text-gray-400 shrink-0">
-      <div class="flex items-center gap-2">
-        <span class="text-[#00d2c4]">[✓]</span>
-        <span id="status-message">Document: Done</span>
-      </div>
-      <div class="text-gray-500">
-        RyneOS v1.0
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Lightbox Modal -->
-  <div id="lightbox" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" onclick="closeLightbox()">
-    <div class="bg-[#161821] bevel-out p-4 max-w-2xl w-full relative" onclick="event.stopPropagation()">
-      <button onclick="closeLightbox()" class="absolute top-2 right-2 text-gray-400 hover:text-white font-retro text-xl px-2">×</button>
-      <h3 id="modal-title" class="text-lg font-bold text-[#00d2c4] mb-3 font-retro">Artwork Preview</h3>
-      
-      <div class="w-full max-h-[75vh] bg-[#0f1117] bevel-in overflow-hidden flex items-center justify-center">
-        <img id="modal-img" src="" alt="Full Artwork Preview" class="max-h-[70vh] w-auto object-contain">
-      </div>
-    </div>
-  </div>
-
-  <!-- Retro Direct Message / Note Modal -->
-  <div id="note-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" onclick="closeNoteModal()">
-    <div class="bg-[#161821] bevel-out p-4 max-w-md w-full space-y-3" onclick="event.stopPropagation()">
-      <div class="bg-gradient-to-r from-[#0a5bc4] to-[#3a92d8] px-2.5 py-1 flex items-center justify-between">
-        <span id="note-modal-title" class="font-retro text-base text-white">Retro Mail — Post Note</span>
-        <button onclick="closeNoteModal()" class="text-white font-retro text-lg leading-none px-1">×</button>
-      </div>
-      <p id="note-modal-body" class="text-sm text-gray-200 bg-[#202430] bevel-in p-3 leading-relaxed"></p>
-      <div class="flex justify-end">
-        <button onclick="closeNoteModal()" class="bg-[#252934] hover:bg-[#2f3545] text-[#00d2c4] font-retro text-base px-4 py-1 bevel-out cursor-pointer">
-          [ OK ]
-        </button>
-      </div>
-    </div>
-  </div>
-
   <script>
     function switchTab(tabName) {
       ['home', 'about', 'achievements', 'parents'].forEach(t => {
